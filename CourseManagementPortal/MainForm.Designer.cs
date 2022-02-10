@@ -942,7 +942,7 @@
             this.btnDeleteTeacherCourse.BackColor = System.Drawing.Color.Red;
             this.btnDeleteTeacherCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteTeacherCourse.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteTeacherCourse.Location = new System.Drawing.Point(812, 545);
+            this.btnDeleteTeacherCourse.Location = new System.Drawing.Point(812, 542);
             this.btnDeleteTeacherCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDeleteTeacherCourse.Name = "btnDeleteTeacherCourse";
             this.btnDeleteTeacherCourse.Size = new System.Drawing.Size(150, 40);
@@ -967,7 +967,7 @@
             this.gbTeacherCourse.Controls.Add(this.label24);
             this.gbTeacherCourse.Controls.Add(this.tbxTeacherNameTeacherCourse);
             this.gbTeacherCourse.Controls.Add(this.tbxTeacherSurnameTeacherCourse);
-            this.gbTeacherCourse.Location = new System.Drawing.Point(6, 328);
+            this.gbTeacherCourse.Location = new System.Drawing.Point(6, 325);
             this.gbTeacherCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbTeacherCourse.Name = "gbTeacherCourse";
             this.gbTeacherCourse.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1116,7 +1116,7 @@
             this.dgvTeacherCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvTeacherCourse.Name = "dgvTeacherCourse";
             this.dgvTeacherCourse.RowTemplate.Height = 25;
-            this.dgvTeacherCourse.Size = new System.Drawing.Size(956, 313);
+            this.dgvTeacherCourse.Size = new System.Drawing.Size(956, 310);
             this.dgvTeacherCourse.TabIndex = 0;
             // 
             // tabPage6
@@ -1137,7 +1137,7 @@
             this.btnDeletePlannedCourse.BackColor = System.Drawing.Color.Red;
             this.btnDeletePlannedCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeletePlannedCourse.ForeColor = System.Drawing.Color.White;
-            this.btnDeletePlannedCourse.Location = new System.Drawing.Point(742, 547);
+            this.btnDeletePlannedCourse.Location = new System.Drawing.Point(742, 542);
             this.btnDeletePlannedCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDeletePlannedCourse.Name = "btnDeletePlannedCourse";
             this.btnDeletePlannedCourse.Size = new System.Drawing.Size(220, 40);
@@ -1166,7 +1166,7 @@
             this.gbPlannedCourses.Controls.Add(this.label30);
             this.gbPlannedCourses.Controls.Add(this.tbxCourseNamePlannedCourse);
             this.gbPlannedCourses.Controls.Add(this.tbxTeacherSurnamePlannedCourses);
-            this.gbPlannedCourses.Location = new System.Drawing.Point(6, 267);
+            this.gbPlannedCourses.Location = new System.Drawing.Point(6, 262);
             this.gbPlannedCourses.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbPlannedCourses.Name = "gbPlannedCourses";
             this.gbPlannedCourses.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1347,7 +1347,7 @@
             this.dgvPlannedCourses.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvPlannedCourses.Name = "dgvPlannedCourses";
             this.dgvPlannedCourses.RowTemplate.Height = 25;
-            this.dgvPlannedCourses.Size = new System.Drawing.Size(956, 252);
+            this.dgvPlannedCourses.Size = new System.Drawing.Size(956, 247);
             this.dgvPlannedCourses.TabIndex = 0;
             // 
             // tabPage7
@@ -1368,7 +1368,7 @@
             this.btnDeleteOngoingCourse.BackColor = System.Drawing.Color.Red;
             this.btnDeleteOngoingCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteOngoingCourse.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteOngoingCourse.Location = new System.Drawing.Point(742, 547);
+            this.btnDeleteOngoingCourse.Location = new System.Drawing.Point(742, 542);
             this.btnDeleteOngoingCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDeleteOngoingCourse.Name = "btnDeleteOngoingCourse";
             this.btnDeleteOngoingCourse.Size = new System.Drawing.Size(220, 40);
@@ -1397,7 +1397,7 @@
             this.gbOngoingCourses.Controls.Add(this.label39);
             this.gbOngoingCourses.Controls.Add(this.tbxCourseNameOngoingCourses);
             this.gbOngoingCourses.Controls.Add(this.tbxTeacherSurnameOngoingCourse);
-            this.gbOngoingCourses.Location = new System.Drawing.Point(6, 267);
+            this.gbOngoingCourses.Location = new System.Drawing.Point(6, 262);
             this.gbOngoingCourses.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbOngoingCourses.Name = "gbOngoingCourses";
             this.gbOngoingCourses.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1578,7 +1578,7 @@
             this.dgvOngoingCourses.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvOngoingCourses.Name = "dgvOngoingCourses";
             this.dgvOngoingCourses.RowTemplate.Height = 25;
-            this.dgvOngoingCourses.Size = new System.Drawing.Size(956, 252);
+            this.dgvOngoingCourses.Size = new System.Drawing.Size(956, 247);
             this.dgvOngoingCourses.TabIndex = 0;
             // 
             // tabPage8
@@ -1599,7 +1599,7 @@
             this.btnDeleteStudentOngoingCourseStudents.BackColor = System.Drawing.Color.Red;
             this.btnDeleteStudentOngoingCourseStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteStudentOngoingCourseStudents.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteStudentOngoingCourseStudents.Location = new System.Drawing.Point(742, 547);
+            this.btnDeleteStudentOngoingCourseStudents.Location = new System.Drawing.Point(742, 542);
             this.btnDeleteStudentOngoingCourseStudents.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDeleteStudentOngoingCourseStudents.Name = "btnDeleteStudentOngoingCourseStudents";
             this.btnDeleteStudentOngoingCourseStudents.Size = new System.Drawing.Size(220, 40);
@@ -1630,7 +1630,7 @@
             this.gbOngoingCourseStudents.Controls.Add(this.label46);
             this.gbOngoingCourseStudents.Controls.Add(this.tbxLessonName);
             this.gbOngoingCourseStudents.Controls.Add(this.tbxStudentSurnameOngoingCourseStudents);
-            this.gbOngoingCourseStudents.Location = new System.Drawing.Point(6, 211);
+            this.gbOngoingCourseStudents.Location = new System.Drawing.Point(6, 206);
             this.gbOngoingCourseStudents.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbOngoingCourseStudents.Name = "gbOngoingCourseStudents";
             this.gbOngoingCourseStudents.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1832,7 +1832,7 @@
             this.dgvOngoingCourseStudents.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvOngoingCourseStudents.Name = "dgvOngoingCourseStudents";
             this.dgvOngoingCourseStudents.RowTemplate.Height = 25;
-            this.dgvOngoingCourseStudents.Size = new System.Drawing.Size(956, 196);
+            this.dgvOngoingCourseStudents.Size = new System.Drawing.Size(956, 191);
             this.dgvOngoingCourseStudents.TabIndex = 1;
             // 
             // frmMain
