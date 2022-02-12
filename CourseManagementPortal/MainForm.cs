@@ -109,7 +109,8 @@ namespace CourseManagementPortal
 
             if (string.IsNullOrEmpty(tbxCourseNameCreate.Text) || nudCourseDurationCreate.Value <= 0 || nudCoursePriceCreate.Value <= 0)
             {
-                MessageBox.Show("No course were added! Course name can't be empty and duration and price must be greater than 0", "Course management portal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No course were added! Course name can't be empty and duration and " +
+                    "price must be greater than 0", "Course management portal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -231,7 +232,8 @@ namespace CourseManagementPortal
         {
             int id = Convert.ToInt32(dgvStudent.CurrentRow.Cells[0].Value);
 
-            var dialogResult = MessageBox.Show($"The student id {id} will be deleted. Are you sure about that?", "Course management portal", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            var dialogResult = MessageBox.Show($"The student id {id} will be deleted. " +
+                $"Are you sure about that?", "Course management portal", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (dialogResult == DialogResult.Yes)
             {
@@ -278,7 +280,8 @@ namespace CourseManagementPortal
 
             if (string.IsNullOrEmpty(tbxTeacherNameCreate.Text) || string.IsNullOrEmpty(tbxTeacherSurnameCreate.Text) || string.IsNullOrEmpty(cbTeacherProfession.Text))
             {
-                MessageBox.Show("No teacher were added! Teacher name, surname and profession name can't be empty", "Course management portal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No teacher were added! Teacher name, surname and profession name " +
+                    "can't be empty", "Course management portal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -315,7 +318,8 @@ namespace CourseManagementPortal
         {
             int id = Convert.ToInt32(dgvTeacher.CurrentRow.Cells[0].Value);
 
-            var dialogResult = MessageBox.Show($"The teacher id {id} will be deleted. Are you sure about that?", "Course management portal", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            var dialogResult = MessageBox.Show($"The teacher id {id} will be deleted. " +
+                $"Are you sure about that?", "Course management portal", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (dialogResult == DialogResult.Yes)
             {
@@ -425,7 +429,8 @@ namespace CourseManagementPortal
 
             if (string.IsNullOrEmpty(cbTeacherIdTeacherCourse.Text) || string.IsNullOrEmpty(cbCourseIdTeacherCourse.Text))
             {
-                MessageBox.Show("No contact between teacher and course were added! Teacher id and course id can't be empty", "Course management portal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No contact between teacher and course were added! " +
+                    "Teacher id and course id can't be empty", "Course management portal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -559,7 +564,8 @@ namespace CourseManagementPortal
         {
             int id = Convert.ToInt32(dgvTeacherCourse.CurrentRow.Cells[0].Value);
 
-            var dialogResult = MessageBox.Show($"The contact between teacher and course id {id} will be deleted. Are you sure about that?", "Course management portal", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            var dialogResult = MessageBox.Show($"The contact between teacher and course id {id} will be deleted. " +
+                $"Are you sure about that?", "Course management portal", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (dialogResult == DialogResult.Yes)
             {
@@ -617,7 +623,8 @@ namespace CourseManagementPortal
 
             if (string.IsNullOrEmpty(cbCourseIdPlannedCourses.Text) || string.IsNullOrEmpty(cbTeacherIdPlannedCourses.Text))
             {
-                MessageBox.Show("No planned course were added! Teacher id and course id can't be empty", "Course management portal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No planned course were added! " +
+                    "Teacher id and course id can't be empty", "Course management portal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -633,7 +640,8 @@ namespace CourseManagementPortal
         {
             int id = Convert.ToInt32(dgvPlannedCourses.CurrentRow.Cells[0].Value);
 
-            var dialogResult = MessageBox.Show($"Planned course id {id} will be deleted. Are you sure about that?", "Course management portal", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            var dialogResult = MessageBox.Show($"Planned course id {id} will be deleted. " +
+                $"Are you sure about that?", "Course management portal", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (dialogResult == DialogResult.Yes)
             {
@@ -707,7 +715,8 @@ namespace CourseManagementPortal
         {
             int id = Convert.ToInt32(dgvOngoingCourses.CurrentRow.Cells[0].Value);
 
-            var dialogResult = MessageBox.Show($"Ongoing course id {id} will be deleted. Are you sure about that?", "Course management portal", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            var dialogResult = MessageBox.Show($"Ongoing course id {id} will be deleted. " +
+                $"Are you sure about that?", "Course management portal", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (dialogResult == DialogResult.Yes)
             {
@@ -838,7 +847,8 @@ namespace CourseManagementPortal
 
             if (string.IsNullOrEmpty(cbOngoingCourseId.Text) || string.IsNullOrEmpty(cbStudentIdOngoingCourseStudents.Text))
             {
-                MessageBox.Show("No ongoing course student were added! Student id and ongoing course id can't be empty", "Course management portal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No ongoing course student were added! " +
+                    "Student id and ongoing course id can't be empty", "Course management portal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -854,7 +864,8 @@ namespace CourseManagementPortal
         {
             int id = Convert.ToInt32(dgvOngoingCourseStudents.CurrentRow.Cells[0].Value);
 
-            var dialogResult = MessageBox.Show($"Ongoing course student id {id} will be deleted. Are you sure about that?", "Course management portal", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            var dialogResult = MessageBox.Show($"Ongoing course student id {id} will be deleted. " +
+                $"Are you sure about that?", "Course management portal", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (dialogResult == DialogResult.Yes)
             {
@@ -867,6 +878,83 @@ namespace CourseManagementPortal
             else
             {
                 MessageBox.Show("No ongoing course student were deleted.", "Course management portal", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private DataTable GetResult(string tableName, string text)
+        {
+            ConnectionOpenControl();
+
+            SqlCommand sqlCommand = new SqlCommand($"Select * from {tableName} where Name like '{text}%'", _sqlConnection);
+
+            SqlDataReader reader = sqlCommand.ExecuteReader();
+
+            DataTable result = new DataTable();
+            result.Load(reader);
+
+            reader.Close();
+            ConnectionCloseControl();
+
+            return result;
+        }
+
+        private void ResultForCourse()
+        {
+            string text = tbxSearchCourse.Text;
+
+            dgvCourse.DataSource = GetResult("tblCourse", text);
+        }
+
+        private void tbxSearchCourse_TextChanged(object sender, EventArgs e)
+        {
+            if (tbxSearchCourse.Text.Length > 1)
+            {
+                ResultForCourse();
+            }
+
+            if (tbxSearchCourse.Text == string.Empty)
+            {
+                LoadCourses();
+            }
+        }
+
+        private void ResultForStudent()
+        {
+            string text = tbxSearchStudent.Text;
+
+            dgvStudent.DataSource = GetResult("tblStudent", text);
+        }
+
+        private void tbxSearchStudent_TextChanged(object sender, EventArgs e)
+        {
+            if (tbxSearchStudent.Text.Length > 1)
+            {
+                ResultForStudent();
+            }
+
+            if (tbxSearchStudent.Text == string.Empty)
+            {
+                LoadStudents();
+            }
+        }
+
+        private void ResultForTeacher()
+        {
+            string text = tbxSearchTeacher.Text;
+
+            dgvTeacher.DataSource = GetResult("tblTeacher", text);
+        }
+
+        private void tbxSearchTeacher_TextChanged(object sender, EventArgs e)
+        {
+            if (tbxSearchTeacher.Text.Length > 1)
+            {
+                ResultForTeacher();
+            }
+
+            if (tbxSearchTeacher.Text == string.Empty)
+            {
+                LoadTeachers();
             }
         }
     }

@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label48 = new System.Windows.Forms.Label();
+            this.tbxSearchCourse = new System.Windows.Forms.TextBox();
             this.btnDeleteCourse = new System.Windows.Forms.Button();
             this.gbUpdateCourse = new System.Windows.Forms.GroupBox();
             this.btnCourseUpdate = new System.Windows.Forms.Button();
@@ -50,6 +52,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvCourse = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label49 = new System.Windows.Forms.Label();
+            this.tbxSearchStudent = new System.Windows.Forms.TextBox();
             this.btnStudentDelete = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -69,6 +73,8 @@
             this.tbxStudentNameCreate = new System.Windows.Forms.TextBox();
             this.dgvStudent = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label50 = new System.Windows.Forms.Label();
+            this.tbxSearchTeacher = new System.Windows.Forms.TextBox();
             this.btnTeacherDelete = new System.Windows.Forms.Button();
             this.gbUpdateTeacher = new System.Windows.Forms.GroupBox();
             this.cbTeacherProfessionUpdate = new System.Windows.Forms.ComboBox();
@@ -225,6 +231,8 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.tabPage1.Controls.Add(this.label48);
+            this.tabPage1.Controls.Add(this.tbxSearchCourse);
             this.tabPage1.Controls.Add(this.btnDeleteCourse);
             this.tabPage1.Controls.Add(this.gbUpdateCourse);
             this.tabPage1.Controls.Add(this.gbCreateCourse);
@@ -236,6 +244,26 @@
             this.tabPage1.Size = new System.Drawing.Size(976, 628);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Course";
+            // 
+            // label48
+            // 
+            this.label48.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(649, 11);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(60, 20);
+            this.label48.TabIndex = 11;
+            this.label48.Text = "Search :";
+            // 
+            // tbxSearchCourse
+            // 
+            this.tbxSearchCourse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbxSearchCourse.Location = new System.Drawing.Point(721, 8);
+            this.tbxSearchCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbxSearchCourse.Name = "tbxSearchCourse";
+            this.tbxSearchCourse.Size = new System.Drawing.Size(250, 27);
+            this.tbxSearchCourse.TabIndex = 10;
+            this.tbxSearchCourse.TextChanged += new System.EventHandler(this.tbxSearchCourse_TextChanged);
             // 
             // btnDeleteCourse
             // 
@@ -428,17 +456,19 @@
             this.dgvCourse.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCourse.BackgroundColor = System.Drawing.Color.CornflowerBlue;
             this.dgvCourse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCourse.Location = new System.Drawing.Point(3, 4);
+            this.dgvCourse.Location = new System.Drawing.Point(3, 43);
             this.dgvCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvCourse.Name = "dgvCourse";
             this.dgvCourse.RowTemplate.Height = 25;
-            this.dgvCourse.Size = new System.Drawing.Size(968, 328);
+            this.dgvCourse.Size = new System.Drawing.Size(968, 289);
             this.dgvCourse.TabIndex = 0;
             this.dgvCourse.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCourse_CellClick);
             // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.tabPage2.Controls.Add(this.label49);
+            this.tabPage2.Controls.Add(this.tbxSearchStudent);
             this.tabPage2.Controls.Add(this.btnStudentDelete);
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Controls.Add(this.gbCreateStudent);
@@ -450,6 +480,26 @@
             this.tabPage2.Size = new System.Drawing.Size(976, 628);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Student";
+            // 
+            // label49
+            // 
+            this.label49.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(649, 11);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(60, 20);
+            this.label49.TabIndex = 13;
+            this.label49.Text = "Search :";
+            // 
+            // tbxSearchStudent
+            // 
+            this.tbxSearchStudent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbxSearchStudent.Location = new System.Drawing.Point(721, 8);
+            this.tbxSearchStudent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbxSearchStudent.Name = "tbxSearchStudent";
+            this.tbxSearchStudent.Size = new System.Drawing.Size(250, 27);
+            this.tbxSearchStudent.TabIndex = 12;
+            this.tbxSearchStudent.TextChanged += new System.EventHandler(this.tbxSearchStudent_TextChanged);
             // 
             // btnStudentDelete
             // 
@@ -640,17 +690,19 @@
             this.dgvStudent.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvStudent.BackgroundColor = System.Drawing.Color.CornflowerBlue;
             this.dgvStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStudent.Location = new System.Drawing.Point(3, 4);
+            this.dgvStudent.Location = new System.Drawing.Point(3, 43);
             this.dgvStudent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvStudent.Name = "dgvStudent";
             this.dgvStudent.RowTemplate.Height = 25;
-            this.dgvStudent.Size = new System.Drawing.Size(968, 328);
+            this.dgvStudent.Size = new System.Drawing.Size(968, 289);
             this.dgvStudent.TabIndex = 0;
             this.dgvStudent.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudent_CellClick);
             // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.tabPage3.Controls.Add(this.label50);
+            this.tabPage3.Controls.Add(this.tbxSearchTeacher);
             this.tabPage3.Controls.Add(this.btnTeacherDelete);
             this.tabPage3.Controls.Add(this.gbUpdateTeacher);
             this.tabPage3.Controls.Add(this.gbCreateTeacher);
@@ -660,6 +712,26 @@
             this.tabPage3.Size = new System.Drawing.Size(976, 628);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Teacher";
+            // 
+            // label50
+            // 
+            this.label50.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(649, 11);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(60, 20);
+            this.label50.TabIndex = 17;
+            this.label50.Text = "Search :";
+            // 
+            // tbxSearchTeacher
+            // 
+            this.tbxSearchTeacher.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbxSearchTeacher.Location = new System.Drawing.Point(721, 8);
+            this.tbxSearchTeacher.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbxSearchTeacher.Name = "tbxSearchTeacher";
+            this.tbxSearchTeacher.Size = new System.Drawing.Size(250, 27);
+            this.tbxSearchTeacher.TabIndex = 16;
+            this.tbxSearchTeacher.TextChanged += new System.EventHandler(this.tbxSearchTeacher_TextChanged);
             // 
             // btnTeacherDelete
             // 
@@ -892,11 +964,11 @@
             this.dgvTeacher.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTeacher.BackgroundColor = System.Drawing.Color.CornflowerBlue;
             this.dgvTeacher.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTeacher.Location = new System.Drawing.Point(3, 4);
+            this.dgvTeacher.Location = new System.Drawing.Point(3, 43);
             this.dgvTeacher.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvTeacher.Name = "dgvTeacher";
             this.dgvTeacher.RowTemplate.Height = 25;
-            this.dgvTeacher.Size = new System.Drawing.Size(968, 328);
+            this.dgvTeacher.Size = new System.Drawing.Size(968, 289);
             this.dgvTeacher.TabIndex = 0;
             this.dgvTeacher.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTeacher_CellClick);
             // 
@@ -942,7 +1014,7 @@
             this.btnDeleteTeacherCourse.BackColor = System.Drawing.Color.Red;
             this.btnDeleteTeacherCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteTeacherCourse.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteTeacherCourse.Location = new System.Drawing.Point(812, 542);
+            this.btnDeleteTeacherCourse.Location = new System.Drawing.Point(812, 540);
             this.btnDeleteTeacherCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDeleteTeacherCourse.Name = "btnDeleteTeacherCourse";
             this.btnDeleteTeacherCourse.Size = new System.Drawing.Size(150, 40);
@@ -967,7 +1039,7 @@
             this.gbTeacherCourse.Controls.Add(this.label24);
             this.gbTeacherCourse.Controls.Add(this.tbxTeacherNameTeacherCourse);
             this.gbTeacherCourse.Controls.Add(this.tbxTeacherSurnameTeacherCourse);
-            this.gbTeacherCourse.Location = new System.Drawing.Point(6, 325);
+            this.gbTeacherCourse.Location = new System.Drawing.Point(6, 323);
             this.gbTeacherCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbTeacherCourse.Name = "gbTeacherCourse";
             this.gbTeacherCourse.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1116,7 +1188,7 @@
             this.dgvTeacherCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvTeacherCourse.Name = "dgvTeacherCourse";
             this.dgvTeacherCourse.RowTemplate.Height = 25;
-            this.dgvTeacherCourse.Size = new System.Drawing.Size(956, 310);
+            this.dgvTeacherCourse.Size = new System.Drawing.Size(956, 308);
             this.dgvTeacherCourse.TabIndex = 0;
             // 
             // tabPage6
@@ -1368,7 +1440,7 @@
             this.btnDeleteOngoingCourse.BackColor = System.Drawing.Color.Red;
             this.btnDeleteOngoingCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteOngoingCourse.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteOngoingCourse.Location = new System.Drawing.Point(742, 542);
+            this.btnDeleteOngoingCourse.Location = new System.Drawing.Point(742, 543);
             this.btnDeleteOngoingCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDeleteOngoingCourse.Name = "btnDeleteOngoingCourse";
             this.btnDeleteOngoingCourse.Size = new System.Drawing.Size(220, 40);
@@ -1397,7 +1469,7 @@
             this.gbOngoingCourses.Controls.Add(this.label39);
             this.gbOngoingCourses.Controls.Add(this.tbxCourseNameOngoingCourses);
             this.gbOngoingCourses.Controls.Add(this.tbxTeacherSurnameOngoingCourse);
-            this.gbOngoingCourses.Location = new System.Drawing.Point(6, 262);
+            this.gbOngoingCourses.Location = new System.Drawing.Point(6, 263);
             this.gbOngoingCourses.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbOngoingCourses.Name = "gbOngoingCourses";
             this.gbOngoingCourses.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1578,7 +1650,7 @@
             this.dgvOngoingCourses.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvOngoingCourses.Name = "dgvOngoingCourses";
             this.dgvOngoingCourses.RowTemplate.Height = 25;
-            this.dgvOngoingCourses.Size = new System.Drawing.Size(956, 247);
+            this.dgvOngoingCourses.Size = new System.Drawing.Size(956, 248);
             this.dgvOngoingCourses.TabIndex = 0;
             // 
             // tabPage8
@@ -1852,6 +1924,7 @@
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.gbUpdateCourse.ResumeLayout(false);
             this.gbUpdateCourse.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCourseDurationUpdate)).EndInit();
@@ -1862,12 +1935,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudCourseDurationCreate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCourse)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.gbCreateStudent.ResumeLayout(false);
             this.gbCreateStudent.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).EndInit();
             this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.gbUpdateTeacher.ResumeLayout(false);
             this.gbUpdateTeacher.PerformLayout();
             this.gbCreateTeacher.ResumeLayout(false);
@@ -2043,5 +2118,11 @@
         private System.Windows.Forms.RadioButton rbNotInLesson;
         private System.Windows.Forms.RadioButton rbInLesson;
         private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.TextBox tbxSearchCourse;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.TextBox tbxSearchStudent;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.TextBox tbxSearchTeacher;
     }
 }
