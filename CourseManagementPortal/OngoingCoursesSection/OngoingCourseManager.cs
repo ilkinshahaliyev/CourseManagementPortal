@@ -16,7 +16,7 @@ namespace CourseManagementPortal.OngoingCoursesSection
         {
             ConnectionOpenControl();
 
-            SqlCommand sqlCommand = new SqlCommand("Select oc.Id, c.Name as CourseName, t.Name as TeacherName, t.Surname as TeacherSurname, oc.StartDate, oc.EndDate from tblOngoingCourses oc " +
+            SqlCommand sqlCommand = new SqlCommand("Select oc.Id as No, oc.Name, c.Name as CourseName, t.Name as TeacherName, t.Surname as TeacherSurname, oc.PlannedStartDate, oc.PlannedEndDate, oc.StartDate, oc.EndDate from tblOngoingCourses oc " +
                 "join tblCourse c on oc.CourseId = c.Id " +
                 "join tblTeacher t on oc.TeacherId = t.Id", _sqlConnection);
 
@@ -35,11 +35,26 @@ namespace CourseManagementPortal.OngoingCoursesSection
         {
             ConnectionOpenControl();
 
-            SqlCommand sqlCommand = new SqlCommand(@"Insert into tblOngoingCourses(CourseId, TeacherId, StartDate, EndDate) values(@courseId, @teacherId, @startDate, @endDate)", _sqlConnection);
+            SqlCommand sqlCommand = new SqlCommand(@"Insert into tblOngoingCourses(Name, CourseId, TeacherId, PlannedStartDate, PlannedEndDate) values(@name, @courseId, @teacherId, @plannedStartDate, @plannedEndDate)", _sqlConnection);
+            sqlCommand.Parameters.AddWithValue("@name", ongoingCourses.Name);
             sqlCommand.Parameters.AddWithValue("@courseId", ongoingCourses.CourseId);
             sqlCommand.Parameters.AddWithValue("@teacherId", ongoingCourses.TeacherId);
+            sqlCommand.Parameters.AddWithValue("@plannedStartDate", ongoingCourses.PlannedStartDate);
+            sqlCommand.Parameters.AddWithValue("@plannedEndDate", ongoingCourses.PlannedEndDate);
+
+            sqlCommand.ExecuteNonQuery();
+
+            ConnectionCloseControl();
+        }
+
+        public void Update(OngoingCourses ongoingCourses)
+        {
+            ConnectionOpenControl();
+
+            SqlCommand sqlCommand = new SqlCommand(@"Update tblOngoingCourses set StartDate = @startDate, EndDate = @endDate where Id = @id", _sqlConnection);
             sqlCommand.Parameters.AddWithValue("@startDate", ongoingCourses.StartDate);
             sqlCommand.Parameters.AddWithValue("@endDate", ongoingCourses.EndDate);
+            sqlCommand.Parameters.AddWithValue("@id", ongoingCourses.Id);
 
             sqlCommand.ExecuteNonQuery();
 

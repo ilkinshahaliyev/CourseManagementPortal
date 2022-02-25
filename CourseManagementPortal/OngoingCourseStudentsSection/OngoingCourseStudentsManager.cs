@@ -16,7 +16,8 @@ namespace CourseManagementPortal.OngoingCourseStudentsSection
         {
             ConnectionOpenControl();
 
-            SqlCommand sqlCommand = new SqlCommand("select ocs.Id, ocs.OngoingCourseId, ocs.LessonName, s.Name as StudentName, s.Surname as StudentSurname, ocs.IsInLesson, ocs.LessonDate, ocs.Note from tblOngoingCourseStudents ocs " +
+            SqlCommand sqlCommand = new SqlCommand("select ocs.Id as No, oc.Name, ocs.LessonName, s.Name as StudentName, s.Surname as StudentSurname, ocs.IsInLesson, ocs.LessonDate, ocs.Note from tblOngoingCourseStudents ocs " +
+                "join tblOngoingCourses oc on ocs.OngoingCourseId = oc.Id " +
                 "join tblStudent s on ocs.StudentId = s.Id", _sqlConnection);
 
             SqlDataReader reader = sqlCommand.ExecuteReader();

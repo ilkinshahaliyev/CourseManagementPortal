@@ -12,7 +12,6 @@ using CourseManagementPortal.CourseSection;
 using CourseManagementPortal.StudentSection;
 using CourseManagementPortal.TeacherSection;
 using CourseManagementPortal.TeacherCourseSection;
-using CourseManagementPortal.PlannedCoursesSection;
 using CourseManagementPortal.OngoingCoursesSection;
 using CourseManagementPortal.OngoingCourseStudentsSection;
 
@@ -29,8 +28,6 @@ namespace CourseManagementPortal
         TeacherManager _teacherManager = new TeacherManager();
 
         TeacherCourseManager _teacherCourseManager = new TeacherCourseManager();
-
-        PlannedCoursesManager _plannedCoursesManager = new PlannedCoursesManager();
 
         OngoingCourseManager _ongoingCourseManager = new OngoingCourseManager();
 
@@ -61,11 +58,6 @@ namespace CourseManagementPortal
             dgvTeacherCourse.DataSource = _teacherCourseManager.GetAllTeacherCourses();
         }
 
-        private void LoadPlannedCourses()
-        {
-            dgvPlannedCourses.DataSource = _plannedCoursesManager.GetAllPlannedCourses();
-        }
-
         private void LoadOngoingCourses()
         {
             dgvOngoingCourses.DataSource = _ongoingCourseManager.GetAllOngoingCourses();
@@ -89,8 +81,6 @@ namespace CourseManagementPortal
             LoadTeachers();
 
             LoadTeacherCourses();
-
-            LoadPlannedCourses();
 
             LoadOngoingCourses();
 
@@ -419,21 +409,66 @@ namespace CourseManagementPortal
             ConnectionCloseControl();
         }
 
+        private int GetTeacherId(string name, string surname)
+        {
+            ConnectionOpenControl();
+
+            SqlCommand sqlCommand = new($"Select Id from tblTeacher where Name = '{name}' and Surname = '{surname}'", _sqlConnection);
+
+            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+
+            int id = 0;
+
+            while (sqlDataReader.Read())
+            {
+                id = Convert.ToInt32(sqlDataReader.GetInt32(0));
+            }
+
+            sqlDataReader.Close();
+            ConnectionCloseControl();
+
+            return id;
+        }
+
+        private int GetCourseId(string name)
+        {
+            ConnectionOpenControl();
+
+            SqlCommand sqlCommand = new($"Select Id from tblCourse where Name = '{name}'", _sqlConnection);
+
+            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+
+            int id = 0;
+
+            while (sqlDataReader.Read())
+            {
+                id = Convert.ToInt32(sqlDataReader.GetInt32(0));
+            }
+
+            sqlDataReader.Close();
+            ConnectionCloseControl();
+
+            return id;
+        }
+
         private void btnCreateTeacherCourse_Click(object sender, EventArgs e)
         {
-            TeacherCourse teacherCourse = new()
-            {
-                TeacherId = Convert.ToInt32(cbTeacherIdTeacherCourse.Text),
-                CourseId = Convert.ToInt32(cbCourseIdTeacherCourse.Text)
-            };
-
-            if (string.IsNullOrEmpty(cbTeacherIdTeacherCourse.Text) || string.IsNullOrEmpty(cbCourseIdTeacherCourse.Text))
+            if (string.IsNullOrEmpty(cbTeacherIdTeacherCourse.Text) || string.IsNullOrEmpty(cbTeacherIdTeacherCourse.Text))
             {
                 MessageBox.Show("No contact between teacher and course were added! " +
-                    "Teacher id and course id can't be empty", "Course management portal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                "Teacher id and course id can't be empty", "Course management portal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
+                var resultTeacher = GetTeacherId(cbTeacherIdTeacherCourse.Text.Split(' ')[0], cbTeacherIdTeacherCourse.Text.Split(' ')[1]);
+                var resultCourse = GetCourseId(cbCourseIdTeacherCourse.Text);
+
+                TeacherCourse teacherCourse = new()
+                {
+                    TeacherId = resultTeacher,
+                    CourseId = resultCourse
+                };
+
                 _teacherCourseManager.Add(teacherCourse);
 
                 MessageBox.Show("Contact between teacher and course added succesfully.", "Course management portal", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -442,17 +477,17 @@ namespace CourseManagementPortal
             LoadTeacherCourses();
         }
 
-        private void GetTeachersId(ComboBox comboBox)
+        private void GetTeachersNameAndSurname(ComboBox comboBox)
         {
             ConnectionOpenControl();
 
-            SqlCommand sqlCommand = new SqlCommand("Select Id from tblTeacher", _sqlConnection);
+            SqlCommand sqlCommand = new SqlCommand("Select Name, Surname from tblTeacher", _sqlConnection);
 
             SqlDataReader reader = sqlCommand.ExecuteReader();
 
             while (reader.Read())
             {
-                comboBox.Items.Add(reader.GetInt32(0));
+                comboBox.Items.Add(reader.GetString(0) + " " + reader.GetString(1));
             }
 
             reader.Close();
@@ -463,20 +498,20 @@ namespace CourseManagementPortal
         {
             cbTeacherIdTeacherCourse.Items.Clear();
 
-            GetTeachersId(cbTeacherIdTeacherCourse);
+            GetTeachersNameAndSurname(cbTeacherIdTeacherCourse);
         }
 
-        private void GetCourseId(ComboBox comboBox)
+        private void GetCourseName(ComboBox comboBox)
         {
             ConnectionOpenControl();
 
-            SqlCommand sqlCommand = new SqlCommand("Select Id from tblCourse", _sqlConnection);
+            SqlCommand sqlCommand = new SqlCommand("Select Name from tblCourse", _sqlConnection);
 
             SqlDataReader reader = sqlCommand.ExecuteReader();
 
             while (reader.Read())
             {
-                comboBox.Items.Add(reader.GetInt32(0));
+                comboBox.Items.Add(reader.GetString(0));
             }
 
             reader.Close();
@@ -487,77 +522,7 @@ namespace CourseManagementPortal
         {
             cbCourseIdTeacherCourse.Items.Clear();
 
-            GetCourseId(cbCourseIdTeacherCourse);
-        }
-
-        private void GetTeacherName(TextBox textBox, int id)
-        {
-            ConnectionOpenControl();
-
-            SqlCommand sqlCommand = new SqlCommand("Select Name from tblTeacher where Id = @id", _sqlConnection);
-            sqlCommand.Parameters.AddWithValue("@id", id);
-
-            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
-
-            while (sqlDataReader.Read())
-            {
-                textBox.Text = sqlDataReader.GetString("Name");
-            }
-
-            sqlDataReader.Close();
-            ConnectionCloseControl();
-        }
-
-        private void GetTeacherSurname(TextBox textBox, int id)
-        {
-            ConnectionOpenControl();
-
-            SqlCommand sqlCommand = new SqlCommand("Select Surname from tblTeacher where Id = @id", _sqlConnection);
-            sqlCommand.Parameters.AddWithValue("@id", id);
-
-            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
-
-            while (sqlDataReader.Read())
-            {
-                textBox.Text = sqlDataReader.GetString("Surname");
-            }
-
-            sqlDataReader.Close();
-            ConnectionCloseControl();
-        }
-
-        private void btnGetTeacherData_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(cbTeacherIdTeacherCourse.Text);
-
-            GetTeacherName(tbxTeacherNameTeacherCourse, id);
-
-            GetTeacherSurname(tbxTeacherSurnameTeacherCourse, id);
-        }
-
-        private void GetCourseName(TextBox textBox, int id)
-        {
-            ConnectionOpenControl();
-
-            SqlCommand sqlCommand = new SqlCommand("Select Name from tblCourse where Id = @id", _sqlConnection);
-            sqlCommand.Parameters.AddWithValue("@id", id);
-
-            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
-
-            while (sqlDataReader.Read())
-            {
-                textBox.Text = sqlDataReader.GetString("Name");
-            }
-
-            sqlDataReader.Close();
-            ConnectionCloseControl();
-        }
-
-        private void btnGetCourseData_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(cbCourseIdTeacherCourse.Text);
-
-            GetCourseName(tbxCourseNameTeacherCourse, id);
+            GetCourseName(cbCourseIdTeacherCourse);
         }
 
         private void btnDeleteTeacherCourse_Click(object sender, EventArgs e)
@@ -581,128 +546,40 @@ namespace CourseManagementPortal
             }
         }
 
-        private void btnGetCourseDataPlannedCourse_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(cbCourseIdPlannedCourses.Text);
-
-            GetCourseName(tbxCourseNamePlannedCourse, id);
-        }
-
-        private void cbCourseIdPlannedCourses_Click(object sender, EventArgs e)
-        {
-            cbCourseIdPlannedCourses.Items.Clear();
-
-            GetCourseId(cbCourseIdPlannedCourses);
-        }
-
-        private void cbTeacherIdPlannedCourses_Click(object sender, EventArgs e)
-        {
-            cbTeacherIdPlannedCourses.Items.Clear();
-
-            GetTeachersId(cbTeacherIdPlannedCourses);
-        }
-
-        private void btnGetTeacherDataPlannedCourse_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(cbTeacherIdPlannedCourses.Text);
-
-            GetTeacherName(tbxTeacherNamePlannedCourses, id);
-
-            GetTeacherSurname(tbxTeacherSurnamePlannedCourses, id);
-        }
-
-        private void btnPlanNewCourse_Click(object sender, EventArgs e)
-        {
-            PlannedCourses plannedCourses = new()
-            {
-                CourseId = Convert.ToInt32(cbCourseIdPlannedCourses.Text),
-                TeacherId = Convert.ToInt32(cbTeacherIdPlannedCourses.Text),
-                PlannedStartDate = dtpPlannedStartDate.Value,
-                PlannedEndDate = dtpPlannedEndDate.Value
-            };
-
-            if (string.IsNullOrEmpty(cbCourseIdPlannedCourses.Text) || string.IsNullOrEmpty(cbTeacherIdPlannedCourses.Text))
-            {
-                MessageBox.Show("No planned course were added! " +
-                    "Teacher id and course id can't be empty", "Course management portal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                _plannedCoursesManager.Add(plannedCourses);
-
-                MessageBox.Show("Planned course added succesfully.", "Course management portal", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-            LoadPlannedCourses();
-        }
-
-        private void btnDeletePlannedCourse_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(dgvPlannedCourses.CurrentRow.Cells[0].Value);
-
-            var dialogResult = MessageBox.Show($"Planned course id {id} will be deleted. " +
-                $"Are you sure about that?", "Course management portal", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-            if (dialogResult == DialogResult.Yes)
-            {
-                _plannedCoursesManager.Delete(id);
-
-                LoadPlannedCourses();
-
-                MessageBox.Show($"Planned course id {id} deleted.", "Course management portal", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("No planned course were deleted.", "Course management portal", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
         private void cbCourseIdOngoingCourses_Click(object sender, EventArgs e)
         {
             cbCourseIdOngoingCourses.Items.Clear();
 
-            GetCourseId(cbCourseIdOngoingCourses);
-        }
-
-        private void btnGetCourseDataOngoingCourse_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(cbCourseIdOngoingCourses.Text);
-
-            GetCourseName(tbxCourseNameOngoingCourses, id);
+            GetCourseName(cbCourseIdOngoingCourses);
         }
 
         private void cbTeacherIdOngoingCourses_Click(object sender, EventArgs e)
         {
             cbTeacherIdOngoingCourses.Items.Clear();
 
-            GetTeachersId(cbTeacherIdOngoingCourses);
+            GetTeachersNameAndSurname(cbTeacherIdOngoingCourses);
         }
 
-        private void btnGetTeacherDataOngoingCourse_Click(object sender, EventArgs e)
+        private void btnPlanOngoingCourse_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(cbTeacherIdOngoingCourses.Text);
-
-            GetTeacherName(tbxTeacherNameOngoingCourse, id);
-
-            GetTeacherSurname(tbxTeacherSurnameOngoingCourse, id);
-        }
-
-        private void btnStartOngoingCourse_Click(object sender, EventArgs e)
-        {
-            OngoingCourses ongoingCourses = new()
+            if (string.IsNullOrEmpty(cbCourseIdOngoingCourses.Text) || string.IsNullOrEmpty(cbTeacherIdOngoingCourses.Text) || string.IsNullOrEmpty(tbxCourseNameOngoingCourse.Text))
             {
-                CourseId = Convert.ToInt32(cbCourseIdOngoingCourses.Text),
-                TeacherId = Convert.ToInt32(cbTeacherIdOngoingCourses.Text),
-                StartDate = dtpStartDateOngoingCourses.Value,
-                EndDate = dtpEndDateOngoingCourse.Value
-            };
-
-            if (string.IsNullOrEmpty(cbCourseIdOngoingCourses.Text) || string.IsNullOrEmpty(cbTeacherIdOngoingCourses.Text))
-            {
-                MessageBox.Show("No ongoing course were added! Teacher id and course id can't be empty", "Course management portal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No ongoing course were added! Teacher id, course id and name can't be empty", "Course management portal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
+                var resultCourse = GetCourseId(cbCourseIdOngoingCourses.Text);
+                var resultTeacher = GetTeacherId(cbTeacherIdOngoingCourses.Text.Split(' ')[0], cbTeacherIdOngoingCourses.Text.Split(' ')[1]);
+
+                OngoingCourses ongoingCourses = new()
+                {
+                    CourseId = resultCourse,
+                    TeacherId = resultTeacher,
+                    Name = tbxCourseNameOngoingCourse.Text,
+                    PlannedStartDate = dtpPlannedStartDateOngoingCourses.Value,
+                    PlannedEndDate = dtpPlannedEndDateOngoingCourse.Value
+                };
+
                 _ongoingCourseManager.Add(ongoingCourses);
 
                 MessageBox.Show("Ongoing course added succesfully.", "Course management portal", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -732,17 +609,17 @@ namespace CourseManagementPortal
             }
         }
 
-        private void GetOngoingCourseId(ComboBox comboBox)
+        private void GetStudentsNameAndSurname(ComboBox comboBox)
         {
             ConnectionOpenControl();
 
-            SqlCommand sqlCommand = new SqlCommand("Select Id from tblOngoingCourses", _sqlConnection);
+            SqlCommand sqlCommand = new SqlCommand("Select Name, Surname from tblStudent", _sqlConnection);
 
             SqlDataReader reader = sqlCommand.ExecuteReader();
 
             while (reader.Read())
             {
-                comboBox.Items.Add(reader.GetInt32(0));
+                comboBox.Items.Add(reader.GetString(0) + " " + reader.GetString(1));
             }
 
             reader.Close();
@@ -753,105 +630,105 @@ namespace CourseManagementPortal
         {
             cbOngoingCourseId.Items.Clear();
 
-            GetOngoingCourseId(cbOngoingCourseId);
-        }
-
-        private void GetStudentId(ComboBox comboBox)
-        {
-            ConnectionOpenControl();
-
-            SqlCommand sqlCommand = new SqlCommand("Select Id from tblStudent", _sqlConnection);
-
-            SqlDataReader reader = sqlCommand.ExecuteReader();
-
-            while (reader.Read())
-            {
-                comboBox.Items.Add(reader.GetInt32(0));
-            }
-
-            reader.Close();
-            ConnectionCloseControl();
+            GetOngoingCourseName(cbOngoingCourseId);
         }
 
         private void cbStudentIdOngoingCourseStudents_Click(object sender, EventArgs e)
         {
             cbStudentIdOngoingCourseStudents.Items.Clear();
 
-            GetStudentId(cbStudentIdOngoingCourseStudents);
+            GetStudentsNameAndSurname(cbStudentIdOngoingCourseStudents);
         }
 
-        private void GetStudentName(TextBox textBox, int id)
+        private void GetOngoingCourseName(ComboBox comboBox)
         {
             ConnectionOpenControl();
 
-            SqlCommand sqlCommand = new SqlCommand("Select Name from tblStudent where Id = @id", _sqlConnection);
-            sqlCommand.Parameters.AddWithValue("@id", id);
+            SqlCommand sqlCommand = new SqlCommand("Select Name from tblOngoingCourses", _sqlConnection);
+
+            SqlDataReader reader = sqlCommand.ExecuteReader();
+
+            while (reader.Read())
+            {
+                comboBox.Items.Add(reader.GetString(0));
+            }
+
+            reader.Close();
+            ConnectionCloseControl();
+        }
+
+        private int GetOngoingCourseId(string name)
+        {
+            ConnectionOpenControl();
+
+            SqlCommand sqlCommand = new($"Select Id from tblOngoingCourses where Name = '{name}'", _sqlConnection);
 
             SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
 
+            int id = 0;
+
             while (sqlDataReader.Read())
             {
-                textBox.Text = sqlDataReader.GetString("Name");
+                id = Convert.ToInt32(sqlDataReader.GetInt32(0));
             }
 
             sqlDataReader.Close();
             ConnectionCloseControl();
+
+            return id;
         }
 
-        private void GetStudentSurname(TextBox textBox, int id)
+        private int GetStudentId(string name, string surname)
         {
             ConnectionOpenControl();
 
-            SqlCommand sqlCommand = new SqlCommand("Select Surname from tblStudent where Id = @id", _sqlConnection);
-            sqlCommand.Parameters.AddWithValue("@id", id);
+            SqlCommand sqlCommand = new($"Select Id from tblStudent where Name = '{name}' and Surname = '{surname}'", _sqlConnection);
 
             SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
 
+            int id = 0;
+
             while (sqlDataReader.Read())
             {
-                textBox.Text = sqlDataReader.GetString("Surname");
+                id = Convert.ToInt32(sqlDataReader.GetInt32(0));
             }
 
             sqlDataReader.Close();
             ConnectionCloseControl();
-        }
 
-        private void btnGetStudentDataOngoingCourseStudents_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(cbStudentIdOngoingCourseStudents.Text);
-
-            GetStudentName(tbxStudentNameOngoingCourseStudents, id);
-
-            GetStudentSurname(tbxStudentSurnameOngoingCourseStudents, id);
+            return id;
         }
 
         private void btnAddStudentOngoingCourseStudents_Click(object sender, EventArgs e)
         {
-            OngoingCourseStudents ongoingCourseStudents = new()
-            {
-                OngoingCourseId = Convert.ToInt32(cbOngoingCourseId.Text),
-                LessonName = tbxLessonName.Text,
-                StudentId = Convert.ToInt32(cbStudentIdOngoingCourseStudents.Text),
-                LessonDate = dtpLessonDate.Value,
-                Note = tbxNote.Text
-            };
-
-            if (rbInLesson.Checked == true)
-            {
-                ongoingCourseStudents.IsInLesson = rbInLesson.Text;
-            }
-            else if (rbNotInLesson.Checked == true)
-            {
-                ongoingCourseStudents.IsInLesson = rbNotInLesson.Text;
-            }
-
-            if (string.IsNullOrEmpty(cbOngoingCourseId.Text) || string.IsNullOrEmpty(cbStudentIdOngoingCourseStudents.Text))
+            if (string.IsNullOrEmpty(cbOngoingCourseId.Text) || string.IsNullOrEmpty(cbStudentIdOngoingCourseStudents.Text) || string.IsNullOrEmpty(tbxLessonName.Text))
             {
                 MessageBox.Show("No ongoing course student were added! " +
-                    "Student id and ongoing course id can't be empty", "Course management portal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    "Student id, ongoing course id and lesson name can't be empty", "Course management portal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
+                var resultOngoingCourse = GetOngoingCourseId(cbOngoingCourseId.Text);
+                var resultStudent = GetStudentId(cbStudentIdOngoingCourseStudents.Text.Split(' ')[0], cbStudentIdOngoingCourseStudents.Text.Split(' ')[1]);
+
+                OngoingCourseStudents ongoingCourseStudents = new()
+                {
+                    OngoingCourseId = resultOngoingCourse,
+                    LessonName = tbxLessonName.Text,
+                    StudentId = resultStudent,
+                    LessonDate = dtpLessonDate.Value,
+                    Note = tbxNote.Text
+                };
+
+                if (rbInLesson.Checked == true)
+                {
+                    ongoingCourseStudents.IsInLesson = rbInLesson.Text;
+                }
+                else if (rbNotInLesson.Checked == true)
+                {
+                    ongoingCourseStudents.IsInLesson = rbNotInLesson.Text;
+                }
+
                 _ongoingCourseStudentsManager.Add(ongoingCourseStudents);
 
                 MessageBox.Show("Ongoing course student added succesfully.", "Course management portal", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -956,6 +833,24 @@ namespace CourseManagementPortal
             {
                 LoadTeachers();
             }
+        }
+
+        private void btnStartCourse_Click(object sender, EventArgs e)
+        {
+            var id = Convert.ToInt32(dgvOngoingCourses.CurrentRow.Cells[0].Value);
+
+            OngoingCourses ongoingCourses = new()
+            {
+                Id = id,
+                StartDate = dtpStartCourseStartDate.Value,
+                EndDate = dtpStartCourseEndDate.Value
+            };
+
+            _ongoingCourseManager.Update(ongoingCourses);
+
+            LoadOngoingCourses();
+
+            MessageBox.Show("Course started successfully.", "Course management portal", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

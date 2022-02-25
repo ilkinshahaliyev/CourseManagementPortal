@@ -16,7 +16,7 @@ namespace CourseManagementPortal.TeacherCourseSection
         {
             ConnectionOpenControl();
 
-            SqlCommand sqlCommand = new SqlCommand("select tc.Id, t.Name as TeacherName, t.Surname as TeacherSurname, c.Name as CourseName from tblTeacherCourse tc " +
+            SqlCommand sqlCommand = new SqlCommand("select tc.Id as No, t.Name as TeacherName, t.Surname as TeacherSurname, c.Name as CourseName from tblTeacherCourse tc " +
                 "join tblTeacher t on tc.TeacherId = t.Id " +
                 "join tblCourse c on tc.CourseId = c.Id", _sqlConnection);
 

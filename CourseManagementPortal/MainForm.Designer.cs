@@ -102,61 +102,32 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.btnDeleteTeacherCourse = new System.Windows.Forms.Button();
             this.gbTeacherCourse = new System.Windows.Forms.GroupBox();
-            this.btnGetCourseData = new System.Windows.Forms.Button();
-            this.btnGetTeacherData = new System.Windows.Forms.Button();
-            this.label25 = new System.Windows.Forms.Label();
-            this.tbxCourseNameTeacherCourse = new System.Windows.Forms.TextBox();
             this.cbTeacherIdTeacherCourse = new System.Windows.Forms.ComboBox();
             this.cbCourseIdTeacherCourse = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
             this.btnCreateTeacherCourse = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
+            this.dgvTeacherCourse = new System.Windows.Forms.DataGridView();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.groupBoxStartCourse = new System.Windows.Forms.GroupBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.tbxTeacherNameTeacherCourse = new System.Windows.Forms.TextBox();
-            this.tbxTeacherSurnameTeacherCourse = new System.Windows.Forms.TextBox();
-            this.dgvTeacherCourse = new System.Windows.Forms.DataGridView();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.btnDeletePlannedCourse = new System.Windows.Forms.Button();
-            this.gbPlannedCourses = new System.Windows.Forms.GroupBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.dtpPlannedEndDate = new System.Windows.Forms.DateTimePicker();
-            this.dtpPlannedStartDate = new System.Windows.Forms.DateTimePicker();
-            this.btnGetTeacherDataPlannedCourse = new System.Windows.Forms.Button();
-            this.btnGetCourseDataPlannedCourse = new System.Windows.Forms.Button();
-            this.label26 = new System.Windows.Forms.Label();
-            this.tbxTeacherNamePlannedCourses = new System.Windows.Forms.TextBox();
-            this.cbCourseIdPlannedCourses = new System.Windows.Forms.ComboBox();
-            this.cbTeacherIdPlannedCourses = new System.Windows.Forms.ComboBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.btnPlanNewCourse = new System.Windows.Forms.Button();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.tbxCourseNamePlannedCourse = new System.Windows.Forms.TextBox();
-            this.tbxTeacherSurnamePlannedCourses = new System.Windows.Forms.TextBox();
-            this.dgvPlannedCourses = new System.Windows.Forms.DataGridView();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.dtpStartCourseEndDate = new System.Windows.Forms.DateTimePicker();
+            this.dtpStartCourseStartDate = new System.Windows.Forms.DateTimePicker();
+            this.btnStartCourse = new System.Windows.Forms.Button();
             this.btnDeleteOngoingCourse = new System.Windows.Forms.Button();
             this.gbOngoingCourses = new System.Windows.Forms.GroupBox();
+            this.tbxCourseNameOngoingCourse = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
-            this.dtpEndDateOngoingCourse = new System.Windows.Forms.DateTimePicker();
-            this.dtpStartDateOngoingCourses = new System.Windows.Forms.DateTimePicker();
-            this.btnGetTeacherDataOngoingCourse = new System.Windows.Forms.Button();
-            this.btnGetCourseDataOngoingCourse = new System.Windows.Forms.Button();
-            this.label35 = new System.Windows.Forms.Label();
-            this.tbxTeacherNameOngoingCourse = new System.Windows.Forms.TextBox();
+            this.dtpPlannedEndDateOngoingCourse = new System.Windows.Forms.DateTimePicker();
+            this.dtpPlannedStartDateOngoingCourses = new System.Windows.Forms.DateTimePicker();
             this.cbCourseIdOngoingCourses = new System.Windows.Forms.ComboBox();
             this.cbTeacherIdOngoingCourses = new System.Windows.Forms.ComboBox();
             this.label36 = new System.Windows.Forms.Label();
             this.btnStartOngoingCourse = new System.Windows.Forms.Button();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
-            this.tbxCourseNameOngoingCourses = new System.Windows.Forms.TextBox();
-            this.tbxTeacherSurnameOngoingCourse = new System.Windows.Forms.TextBox();
             this.dgvOngoingCourses = new System.Windows.Forms.DataGridView();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.btnDeleteStudentOngoingCourseStudents = new System.Windows.Forms.Button();
@@ -168,18 +139,13 @@
             this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.dtpLessonDate = new System.Windows.Forms.DateTimePicker();
-            this.btnGetStudentDataOngoingCourseStudents = new System.Windows.Forms.Button();
             this.label42 = new System.Windows.Forms.Label();
-            this.tbxStudentNameOngoingCourseStudents = new System.Windows.Forms.TextBox();
             this.cbOngoingCourseId = new System.Windows.Forms.ComboBox();
             this.cbStudentIdOngoingCourseStudents = new System.Windows.Forms.ComboBox();
             this.label43 = new System.Windows.Forms.Label();
             this.btnAddStudentOngoingCourseStudents = new System.Windows.Forms.Button();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
             this.tbxLessonName = new System.Windows.Forms.TextBox();
-            this.tbxStudentSurnameOngoingCourseStudents = new System.Windows.Forms.TextBox();
             this.dgvOngoingCourseStudents = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -203,10 +169,8 @@
             this.tabPage5.SuspendLayout();
             this.gbTeacherCourse.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeacherCourse)).BeginInit();
-            this.tabPage6.SuspendLayout();
-            this.gbPlannedCourses.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPlannedCourses)).BeginInit();
             this.tabPage7.SuspendLayout();
+            this.groupBoxStartCourse.SuspendLayout();
             this.gbOngoingCourses.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOngoingCourses)).BeginInit();
             this.tabPage8.SuspendLayout();
@@ -985,7 +949,6 @@
             // tabControl2
             // 
             this.tabControl2.Controls.Add(this.tabPage5);
-            this.tabControl2.Controls.Add(this.tabPage6);
             this.tabControl2.Controls.Add(this.tabPage7);
             this.tabControl2.Controls.Add(this.tabPage8);
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1014,11 +977,11 @@
             this.btnDeleteTeacherCourse.BackColor = System.Drawing.Color.Red;
             this.btnDeleteTeacherCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteTeacherCourse.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteTeacherCourse.Location = new System.Drawing.Point(812, 540);
+            this.btnDeleteTeacherCourse.Location = new System.Drawing.Point(812, 538);
             this.btnDeleteTeacherCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDeleteTeacherCourse.Name = "btnDeleteTeacherCourse";
             this.btnDeleteTeacherCourse.Size = new System.Drawing.Size(150, 40);
-            this.btnDeleteTeacherCourse.TabIndex = 6;
+            this.btnDeleteTeacherCourse.TabIndex = 4;
             this.btnDeleteTeacherCourse.Text = "Delete contact";
             this.btnDeleteTeacherCourse.UseVisualStyleBackColor = false;
             this.btnDeleteTeacherCourse.Click += new System.EventHandler(this.btnDeleteTeacherCourse_Click);
@@ -1026,67 +989,19 @@
             // gbTeacherCourse
             // 
             this.gbTeacherCourse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.gbTeacherCourse.Controls.Add(this.btnGetCourseData);
-            this.gbTeacherCourse.Controls.Add(this.btnGetTeacherData);
-            this.gbTeacherCourse.Controls.Add(this.label25);
-            this.gbTeacherCourse.Controls.Add(this.tbxCourseNameTeacherCourse);
             this.gbTeacherCourse.Controls.Add(this.cbTeacherIdTeacherCourse);
             this.gbTeacherCourse.Controls.Add(this.cbCourseIdTeacherCourse);
             this.gbTeacherCourse.Controls.Add(this.label21);
             this.gbTeacherCourse.Controls.Add(this.btnCreateTeacherCourse);
-            this.gbTeacherCourse.Controls.Add(this.label22);
-            this.gbTeacherCourse.Controls.Add(this.label23);
             this.gbTeacherCourse.Controls.Add(this.label24);
-            this.gbTeacherCourse.Controls.Add(this.tbxTeacherNameTeacherCourse);
-            this.gbTeacherCourse.Controls.Add(this.tbxTeacherSurnameTeacherCourse);
-            this.gbTeacherCourse.Location = new System.Drawing.Point(6, 323);
+            this.gbTeacherCourse.Location = new System.Drawing.Point(6, 389);
             this.gbTeacherCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbTeacherCourse.Name = "gbTeacherCourse";
             this.gbTeacherCourse.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gbTeacherCourse.Size = new System.Drawing.Size(601, 265);
+            this.gbTeacherCourse.Size = new System.Drawing.Size(601, 199);
             this.gbTeacherCourse.TabIndex = 0;
             this.gbTeacherCourse.TabStop = false;
             this.gbTeacherCourse.Text = "Create new teacher and course contact";
-            // 
-            // btnGetCourseData
-            // 
-            this.btnGetCourseData.BackColor = System.Drawing.Color.Lime;
-            this.btnGetCourseData.Location = new System.Drawing.Point(481, 131);
-            this.btnGetCourseData.Name = "btnGetCourseData";
-            this.btnGetCourseData.Size = new System.Drawing.Size(114, 28);
-            this.btnGetCourseData.TabIndex = 4;
-            this.btnGetCourseData.Text = "Get data";
-            this.btnGetCourseData.UseVisualStyleBackColor = false;
-            this.btnGetCourseData.Click += new System.EventHandler(this.btnGetCourseData_Click);
-            // 
-            // btnGetTeacherData
-            // 
-            this.btnGetTeacherData.BackColor = System.Drawing.Color.Lime;
-            this.btnGetTeacherData.Location = new System.Drawing.Point(481, 27);
-            this.btnGetTeacherData.Name = "btnGetTeacherData";
-            this.btnGetTeacherData.Size = new System.Drawing.Size(114, 28);
-            this.btnGetTeacherData.TabIndex = 2;
-            this.btnGetTeacherData.Text = "Get data";
-            this.btnGetTeacherData.UseVisualStyleBackColor = false;
-            this.btnGetTeacherData.Click += new System.EventHandler(this.btnGetTeacherData_Click);
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(6, 168);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(102, 20);
-            this.label25.TabIndex = 0;
-            this.label25.Text = "Course name :";
-            // 
-            // tbxCourseNameTeacherCourse
-            // 
-            this.tbxCourseNameTeacherCourse.Enabled = false;
-            this.tbxCourseNameTeacherCourse.Location = new System.Drawing.Point(187, 165);
-            this.tbxCourseNameTeacherCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbxCourseNameTeacherCourse.Name = "tbxCourseNameTeacherCourse";
-            this.tbxCourseNameTeacherCourse.Size = new System.Drawing.Size(408, 27);
-            this.tbxCourseNameTeacherCourse.TabIndex = 0;
             // 
             // cbTeacherIdTeacherCourse
             // 
@@ -1094,7 +1009,7 @@
             this.cbTeacherIdTeacherCourse.FormattingEnabled = true;
             this.cbTeacherIdTeacherCourse.Location = new System.Drawing.Point(187, 27);
             this.cbTeacherIdTeacherCourse.Name = "cbTeacherIdTeacherCourse";
-            this.cbTeacherIdTeacherCourse.Size = new System.Drawing.Size(288, 28);
+            this.cbTeacherIdTeacherCourse.Size = new System.Drawing.Size(408, 28);
             this.cbTeacherIdTeacherCourse.TabIndex = 1;
             this.cbTeacherIdTeacherCourse.Click += new System.EventHandler(this.cbTeacherIdTeacherCourse_Click);
             // 
@@ -1102,79 +1017,43 @@
             // 
             this.cbCourseIdTeacherCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCourseIdTeacherCourse.FormattingEnabled = true;
-            this.cbCourseIdTeacherCourse.Location = new System.Drawing.Point(187, 130);
+            this.cbCourseIdTeacherCourse.Location = new System.Drawing.Point(187, 61);
             this.cbCourseIdTeacherCourse.Name = "cbCourseIdTeacherCourse";
-            this.cbCourseIdTeacherCourse.Size = new System.Drawing.Size(288, 28);
-            this.cbCourseIdTeacherCourse.TabIndex = 3;
+            this.cbCourseIdTeacherCourse.Size = new System.Drawing.Size(408, 28);
+            this.cbCourseIdTeacherCourse.TabIndex = 2;
             this.cbCourseIdTeacherCourse.Click += new System.EventHandler(this.cbCourseIdTeacherCourse_Click);
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(6, 133);
+            this.label21.Location = new System.Drawing.Point(6, 64);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(78, 20);
+            this.label21.Size = new System.Drawing.Size(61, 20);
             this.label21.TabIndex = 0;
-            this.label21.Text = "Course Id :";
+            this.label21.Text = "Course :";
             // 
             // btnCreateTeacherCourse
             // 
             this.btnCreateTeacherCourse.BackColor = System.Drawing.Color.Green;
             this.btnCreateTeacherCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateTeacherCourse.ForeColor = System.Drawing.Color.White;
-            this.btnCreateTeacherCourse.Location = new System.Drawing.Point(187, 217);
+            this.btnCreateTeacherCourse.Location = new System.Drawing.Point(187, 149);
             this.btnCreateTeacherCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCreateTeacherCourse.Name = "btnCreateTeacherCourse";
             this.btnCreateTeacherCourse.Size = new System.Drawing.Size(408, 40);
-            this.btnCreateTeacherCourse.TabIndex = 5;
+            this.btnCreateTeacherCourse.TabIndex = 3;
             this.btnCreateTeacherCourse.Text = "Create contact between teacher and course";
             this.btnCreateTeacherCourse.UseVisualStyleBackColor = false;
             this.btnCreateTeacherCourse.Click += new System.EventHandler(this.btnCreateTeacherCourse_Click);
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(6, 100);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(126, 20);
-            this.label22.TabIndex = 0;
-            this.label22.Text = "Teacher surname :";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(6, 65);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(107, 20);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Teacher name :";
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Location = new System.Drawing.Point(6, 30);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(83, 20);
+            this.label24.Size = new System.Drawing.Size(66, 20);
             this.label24.TabIndex = 0;
-            this.label24.Text = "Teacher Id :";
-            // 
-            // tbxTeacherNameTeacherCourse
-            // 
-            this.tbxTeacherNameTeacherCourse.Enabled = false;
-            this.tbxTeacherNameTeacherCourse.Location = new System.Drawing.Point(187, 62);
-            this.tbxTeacherNameTeacherCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbxTeacherNameTeacherCourse.Name = "tbxTeacherNameTeacherCourse";
-            this.tbxTeacherNameTeacherCourse.Size = new System.Drawing.Size(408, 27);
-            this.tbxTeacherNameTeacherCourse.TabIndex = 0;
-            // 
-            // tbxTeacherSurnameTeacherCourse
-            // 
-            this.tbxTeacherSurnameTeacherCourse.Enabled = false;
-            this.tbxTeacherSurnameTeacherCourse.Location = new System.Drawing.Point(187, 97);
-            this.tbxTeacherSurnameTeacherCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbxTeacherSurnameTeacherCourse.Name = "tbxTeacherSurnameTeacherCourse";
-            this.tbxTeacherSurnameTeacherCourse.Size = new System.Drawing.Size(408, 27);
-            this.tbxTeacherSurnameTeacherCourse.TabIndex = 0;
+            this.label24.Text = "Teacher :";
             // 
             // dgvTeacherCourse
             // 
@@ -1188,243 +1067,13 @@
             this.dgvTeacherCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvTeacherCourse.Name = "dgvTeacherCourse";
             this.dgvTeacherCourse.RowTemplate.Height = 25;
-            this.dgvTeacherCourse.Size = new System.Drawing.Size(956, 308);
+            this.dgvTeacherCourse.Size = new System.Drawing.Size(956, 374);
             this.dgvTeacherCourse.TabIndex = 0;
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.tabPage6.Controls.Add(this.btnDeletePlannedCourse);
-            this.tabPage6.Controls.Add(this.gbPlannedCourses);
-            this.tabPage6.Controls.Add(this.dgvPlannedCourses);
-            this.tabPage6.Location = new System.Drawing.Point(4, 29);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(968, 595);
-            this.tabPage6.TabIndex = 1;
-            this.tabPage6.Text = "Planned courses";
-            // 
-            // btnDeletePlannedCourse
-            // 
-            this.btnDeletePlannedCourse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeletePlannedCourse.BackColor = System.Drawing.Color.Red;
-            this.btnDeletePlannedCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeletePlannedCourse.ForeColor = System.Drawing.Color.White;
-            this.btnDeletePlannedCourse.Location = new System.Drawing.Point(742, 542);
-            this.btnDeletePlannedCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnDeletePlannedCourse.Name = "btnDeletePlannedCourse";
-            this.btnDeletePlannedCourse.Size = new System.Drawing.Size(220, 40);
-            this.btnDeletePlannedCourse.TabIndex = 5;
-            this.btnDeletePlannedCourse.Text = "Delete planned course";
-            this.btnDeletePlannedCourse.UseVisualStyleBackColor = false;
-            this.btnDeletePlannedCourse.Click += new System.EventHandler(this.btnDeletePlannedCourse_Click);
-            // 
-            // gbPlannedCourses
-            // 
-            this.gbPlannedCourses.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.gbPlannedCourses.Controls.Add(this.label31);
-            this.gbPlannedCourses.Controls.Add(this.label32);
-            this.gbPlannedCourses.Controls.Add(this.dtpPlannedEndDate);
-            this.gbPlannedCourses.Controls.Add(this.dtpPlannedStartDate);
-            this.gbPlannedCourses.Controls.Add(this.btnGetTeacherDataPlannedCourse);
-            this.gbPlannedCourses.Controls.Add(this.btnGetCourseDataPlannedCourse);
-            this.gbPlannedCourses.Controls.Add(this.label26);
-            this.gbPlannedCourses.Controls.Add(this.tbxTeacherNamePlannedCourses);
-            this.gbPlannedCourses.Controls.Add(this.cbCourseIdPlannedCourses);
-            this.gbPlannedCourses.Controls.Add(this.cbTeacherIdPlannedCourses);
-            this.gbPlannedCourses.Controls.Add(this.label27);
-            this.gbPlannedCourses.Controls.Add(this.btnPlanNewCourse);
-            this.gbPlannedCourses.Controls.Add(this.label28);
-            this.gbPlannedCourses.Controls.Add(this.label29);
-            this.gbPlannedCourses.Controls.Add(this.label30);
-            this.gbPlannedCourses.Controls.Add(this.tbxCourseNamePlannedCourse);
-            this.gbPlannedCourses.Controls.Add(this.tbxTeacherSurnamePlannedCourses);
-            this.gbPlannedCourses.Location = new System.Drawing.Point(6, 262);
-            this.gbPlannedCourses.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gbPlannedCourses.Name = "gbPlannedCourses";
-            this.gbPlannedCourses.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gbPlannedCourses.Size = new System.Drawing.Size(601, 328);
-            this.gbPlannedCourses.TabIndex = 2;
-            this.gbPlannedCourses.TabStop = false;
-            this.gbPlannedCourses.Text = "Plan new course";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(6, 233);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(132, 20);
-            this.label31.TabIndex = 0;
-            this.label31.Text = "Planned end date :";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(6, 200);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(136, 20);
-            this.label32.TabIndex = 0;
-            this.label32.Text = "Planned start date :";
-            // 
-            // dtpPlannedEndDate
-            // 
-            this.dtpPlannedEndDate.Location = new System.Drawing.Point(187, 233);
-            this.dtpPlannedEndDate.Name = "dtpPlannedEndDate";
-            this.dtpPlannedEndDate.Size = new System.Drawing.Size(408, 27);
-            this.dtpPlannedEndDate.TabIndex = 6;
-            // 
-            // dtpPlannedStartDate
-            // 
-            this.dtpPlannedStartDate.Location = new System.Drawing.Point(187, 200);
-            this.dtpPlannedStartDate.Name = "dtpPlannedStartDate";
-            this.dtpPlannedStartDate.Size = new System.Drawing.Size(408, 27);
-            this.dtpPlannedStartDate.TabIndex = 5;
-            // 
-            // btnGetTeacherDataPlannedCourse
-            // 
-            this.btnGetTeacherDataPlannedCourse.BackColor = System.Drawing.Color.Lime;
-            this.btnGetTeacherDataPlannedCourse.Location = new System.Drawing.Point(481, 96);
-            this.btnGetTeacherDataPlannedCourse.Name = "btnGetTeacherDataPlannedCourse";
-            this.btnGetTeacherDataPlannedCourse.Size = new System.Drawing.Size(114, 28);
-            this.btnGetTeacherDataPlannedCourse.TabIndex = 4;
-            this.btnGetTeacherDataPlannedCourse.Text = "Get data";
-            this.btnGetTeacherDataPlannedCourse.UseVisualStyleBackColor = false;
-            this.btnGetTeacherDataPlannedCourse.Click += new System.EventHandler(this.btnGetTeacherDataPlannedCourse_Click);
-            // 
-            // btnGetCourseDataPlannedCourse
-            // 
-            this.btnGetCourseDataPlannedCourse.BackColor = System.Drawing.Color.Lime;
-            this.btnGetCourseDataPlannedCourse.Location = new System.Drawing.Point(481, 27);
-            this.btnGetCourseDataPlannedCourse.Name = "btnGetCourseDataPlannedCourse";
-            this.btnGetCourseDataPlannedCourse.Size = new System.Drawing.Size(114, 28);
-            this.btnGetCourseDataPlannedCourse.TabIndex = 2;
-            this.btnGetCourseDataPlannedCourse.Text = "Get data";
-            this.btnGetCourseDataPlannedCourse.UseVisualStyleBackColor = false;
-            this.btnGetCourseDataPlannedCourse.Click += new System.EventHandler(this.btnGetCourseDataPlannedCourse_Click);
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(6, 65);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(102, 20);
-            this.label26.TabIndex = 0;
-            this.label26.Text = "Course name :";
-            // 
-            // tbxTeacherNamePlannedCourses
-            // 
-            this.tbxTeacherNamePlannedCourses.Enabled = false;
-            this.tbxTeacherNamePlannedCourses.Location = new System.Drawing.Point(187, 131);
-            this.tbxTeacherNamePlannedCourses.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbxTeacherNamePlannedCourses.Name = "tbxTeacherNamePlannedCourses";
-            this.tbxTeacherNamePlannedCourses.Size = new System.Drawing.Size(408, 27);
-            this.tbxTeacherNamePlannedCourses.TabIndex = 0;
-            // 
-            // cbCourseIdPlannedCourses
-            // 
-            this.cbCourseIdPlannedCourses.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCourseIdPlannedCourses.FormattingEnabled = true;
-            this.cbCourseIdPlannedCourses.Location = new System.Drawing.Point(187, 27);
-            this.cbCourseIdPlannedCourses.Name = "cbCourseIdPlannedCourses";
-            this.cbCourseIdPlannedCourses.Size = new System.Drawing.Size(288, 28);
-            this.cbCourseIdPlannedCourses.TabIndex = 1;
-            this.cbCourseIdPlannedCourses.Click += new System.EventHandler(this.cbCourseIdPlannedCourses_Click);
-            // 
-            // cbTeacherIdPlannedCourses
-            // 
-            this.cbTeacherIdPlannedCourses.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTeacherIdPlannedCourses.FormattingEnabled = true;
-            this.cbTeacherIdPlannedCourses.Location = new System.Drawing.Point(187, 96);
-            this.cbTeacherIdPlannedCourses.Name = "cbTeacherIdPlannedCourses";
-            this.cbTeacherIdPlannedCourses.Size = new System.Drawing.Size(288, 28);
-            this.cbTeacherIdPlannedCourses.TabIndex = 3;
-            this.cbTeacherIdPlannedCourses.Click += new System.EventHandler(this.cbTeacherIdPlannedCourses_Click);
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(6, 31);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(78, 20);
-            this.label27.TabIndex = 0;
-            this.label27.Text = "Course Id :";
-            // 
-            // btnPlanNewCourse
-            // 
-            this.btnPlanNewCourse.BackColor = System.Drawing.Color.Green;
-            this.btnPlanNewCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlanNewCourse.ForeColor = System.Drawing.Color.White;
-            this.btnPlanNewCourse.Location = new System.Drawing.Point(187, 280);
-            this.btnPlanNewCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnPlanNewCourse.Name = "btnPlanNewCourse";
-            this.btnPlanNewCourse.Size = new System.Drawing.Size(408, 40);
-            this.btnPlanNewCourse.TabIndex = 3;
-            this.btnPlanNewCourse.Text = "Plan new course";
-            this.btnPlanNewCourse.UseVisualStyleBackColor = false;
-            this.btnPlanNewCourse.Click += new System.EventHandler(this.btnPlanNewCourse_Click);
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(6, 169);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(126, 20);
-            this.label28.TabIndex = 0;
-            this.label28.Text = "Teacher surname :";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(6, 134);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(107, 20);
-            this.label29.TabIndex = 0;
-            this.label29.Text = "Teacher name :";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(6, 100);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(83, 20);
-            this.label30.TabIndex = 0;
-            this.label30.Text = "Teacher Id :";
-            // 
-            // tbxCourseNamePlannedCourse
-            // 
-            this.tbxCourseNamePlannedCourse.Enabled = false;
-            this.tbxCourseNamePlannedCourse.Location = new System.Drawing.Point(187, 62);
-            this.tbxCourseNamePlannedCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbxCourseNamePlannedCourse.Name = "tbxCourseNamePlannedCourse";
-            this.tbxCourseNamePlannedCourse.Size = new System.Drawing.Size(408, 27);
-            this.tbxCourseNamePlannedCourse.TabIndex = 0;
-            // 
-            // tbxTeacherSurnamePlannedCourses
-            // 
-            this.tbxTeacherSurnamePlannedCourses.Enabled = false;
-            this.tbxTeacherSurnamePlannedCourses.Location = new System.Drawing.Point(187, 166);
-            this.tbxTeacherSurnamePlannedCourses.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbxTeacherSurnamePlannedCourses.Name = "tbxTeacherSurnamePlannedCourses";
-            this.tbxTeacherSurnamePlannedCourses.Size = new System.Drawing.Size(408, 27);
-            this.tbxTeacherSurnamePlannedCourses.TabIndex = 0;
-            // 
-            // dgvPlannedCourses
-            // 
-            this.dgvPlannedCourses.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvPlannedCourses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvPlannedCourses.BackgroundColor = System.Drawing.Color.CornflowerBlue;
-            this.dgvPlannedCourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPlannedCourses.Location = new System.Drawing.Point(6, 7);
-            this.dgvPlannedCourses.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgvPlannedCourses.Name = "dgvPlannedCourses";
-            this.dgvPlannedCourses.RowTemplate.Height = 25;
-            this.dgvPlannedCourses.Size = new System.Drawing.Size(956, 247);
-            this.dgvPlannedCourses.TabIndex = 0;
             // 
             // tabPage7
             // 
             this.tabPage7.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.tabPage7.Controls.Add(this.groupBoxStartCourse);
             this.tabPage7.Controls.Add(this.btnDeleteOngoingCourse);
             this.tabPage7.Controls.Add(this.gbOngoingCourses);
             this.tabPage7.Controls.Add(this.dgvOngoingCourses);
@@ -1434,17 +1083,80 @@
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "Ongoing courses";
             // 
+            // groupBoxStartCourse
+            // 
+            this.groupBoxStartCourse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBoxStartCourse.Controls.Add(this.label22);
+            this.groupBoxStartCourse.Controls.Add(this.label23);
+            this.groupBoxStartCourse.Controls.Add(this.dtpStartCourseEndDate);
+            this.groupBoxStartCourse.Controls.Add(this.dtpStartCourseStartDate);
+            this.groupBoxStartCourse.Controls.Add(this.btnStartCourse);
+            this.groupBoxStartCourse.Location = new System.Drawing.Point(398, 298);
+            this.groupBoxStartCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBoxStartCourse.Name = "groupBoxStartCourse";
+            this.groupBoxStartCourse.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBoxStartCourse.Size = new System.Drawing.Size(332, 287);
+            this.groupBoxStartCourse.TabIndex = 9;
+            this.groupBoxStartCourse.TabStop = false;
+            this.groupBoxStartCourse.Text = "Start course";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(6, 65);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(75, 20);
+            this.label22.TabIndex = 0;
+            this.label22.Text = "End date :";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(6, 32);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(81, 20);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Start date :";
+            // 
+            // dtpStartCourseEndDate
+            // 
+            this.dtpStartCourseEndDate.Location = new System.Drawing.Point(98, 60);
+            this.dtpStartCourseEndDate.Name = "dtpStartCourseEndDate";
+            this.dtpStartCourseEndDate.Size = new System.Drawing.Size(228, 27);
+            this.dtpStartCourseEndDate.TabIndex = 7;
+            // 
+            // dtpStartCourseStartDate
+            // 
+            this.dtpStartCourseStartDate.Location = new System.Drawing.Point(98, 27);
+            this.dtpStartCourseStartDate.Name = "dtpStartCourseStartDate";
+            this.dtpStartCourseStartDate.Size = new System.Drawing.Size(228, 27);
+            this.dtpStartCourseStartDate.TabIndex = 6;
+            // 
+            // btnStartCourse
+            // 
+            this.btnStartCourse.BackColor = System.Drawing.Color.Blue;
+            this.btnStartCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStartCourse.ForeColor = System.Drawing.Color.White;
+            this.btnStartCourse.Location = new System.Drawing.Point(136, 232);
+            this.btnStartCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnStartCourse.Name = "btnStartCourse";
+            this.btnStartCourse.Size = new System.Drawing.Size(190, 40);
+            this.btnStartCourse.TabIndex = 8;
+            this.btnStartCourse.Text = "Start course";
+            this.btnStartCourse.UseVisualStyleBackColor = false;
+            this.btnStartCourse.Click += new System.EventHandler(this.btnStartCourse_Click);
+            // 
             // btnDeleteOngoingCourse
             // 
             this.btnDeleteOngoingCourse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDeleteOngoingCourse.BackColor = System.Drawing.Color.Red;
             this.btnDeleteOngoingCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteOngoingCourse.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteOngoingCourse.Location = new System.Drawing.Point(742, 543);
+            this.btnDeleteOngoingCourse.Location = new System.Drawing.Point(772, 530);
             this.btnDeleteOngoingCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDeleteOngoingCourse.Name = "btnDeleteOngoingCourse";
-            this.btnDeleteOngoingCourse.Size = new System.Drawing.Size(220, 40);
-            this.btnDeleteOngoingCourse.TabIndex = 8;
+            this.btnDeleteOngoingCourse.Size = new System.Drawing.Size(190, 40);
+            this.btnDeleteOngoingCourse.TabIndex = 9;
             this.btnDeleteOngoingCourse.Text = "Delete ongoing course";
             this.btnDeleteOngoingCourse.UseVisualStyleBackColor = false;
             this.btnDeleteOngoingCourse.Click += new System.EventHandler(this.btnDeleteOngoingCourse_Click);
@@ -1452,111 +1164,82 @@
             // gbOngoingCourses
             // 
             this.gbOngoingCourses.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.gbOngoingCourses.Controls.Add(this.tbxCourseNameOngoingCourse);
+            this.gbOngoingCourses.Controls.Add(this.label25);
             this.gbOngoingCourses.Controls.Add(this.label33);
             this.gbOngoingCourses.Controls.Add(this.label34);
-            this.gbOngoingCourses.Controls.Add(this.dtpEndDateOngoingCourse);
-            this.gbOngoingCourses.Controls.Add(this.dtpStartDateOngoingCourses);
-            this.gbOngoingCourses.Controls.Add(this.btnGetTeacherDataOngoingCourse);
-            this.gbOngoingCourses.Controls.Add(this.btnGetCourseDataOngoingCourse);
-            this.gbOngoingCourses.Controls.Add(this.label35);
-            this.gbOngoingCourses.Controls.Add(this.tbxTeacherNameOngoingCourse);
+            this.gbOngoingCourses.Controls.Add(this.dtpPlannedEndDateOngoingCourse);
+            this.gbOngoingCourses.Controls.Add(this.dtpPlannedStartDateOngoingCourses);
             this.gbOngoingCourses.Controls.Add(this.cbCourseIdOngoingCourses);
             this.gbOngoingCourses.Controls.Add(this.cbTeacherIdOngoingCourses);
             this.gbOngoingCourses.Controls.Add(this.label36);
             this.gbOngoingCourses.Controls.Add(this.btnStartOngoingCourse);
-            this.gbOngoingCourses.Controls.Add(this.label37);
-            this.gbOngoingCourses.Controls.Add(this.label38);
             this.gbOngoingCourses.Controls.Add(this.label39);
-            this.gbOngoingCourses.Controls.Add(this.tbxCourseNameOngoingCourses);
-            this.gbOngoingCourses.Controls.Add(this.tbxTeacherSurnameOngoingCourse);
-            this.gbOngoingCourses.Location = new System.Drawing.Point(6, 263);
+            this.gbOngoingCourses.Location = new System.Drawing.Point(6, 298);
             this.gbOngoingCourses.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbOngoingCourses.Name = "gbOngoingCourses";
             this.gbOngoingCourses.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gbOngoingCourses.Size = new System.Drawing.Size(601, 328);
+            this.gbOngoingCourses.Size = new System.Drawing.Size(386, 287);
             this.gbOngoingCourses.TabIndex = 0;
             this.gbOngoingCourses.TabStop = false;
-            this.gbOngoingCourses.Text = "Start new course";
+            this.gbOngoingCourses.Text = "Plan new course";
+            // 
+            // tbxCourseNameOngoingCourse
+            // 
+            this.tbxCourseNameOngoingCourse.Location = new System.Drawing.Point(159, 62);
+            this.tbxCourseNameOngoingCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbxCourseNameOngoingCourse.Name = "tbxCourseNameOngoingCourse";
+            this.tbxCourseNameOngoingCourse.Size = new System.Drawing.Size(221, 27);
+            this.tbxCourseNameOngoingCourse.TabIndex = 7;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(6, 65);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(56, 20);
+            this.label25.TabIndex = 6;
+            this.label25.Text = "Name :";
             // 
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(6, 234);
+            this.label33.Location = new System.Drawing.Point(6, 163);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(75, 20);
+            this.label33.Size = new System.Drawing.Size(132, 20);
             this.label33.TabIndex = 0;
-            this.label33.Text = "End date :";
+            this.label33.Text = "Planned end date :";
             // 
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(6, 201);
+            this.label34.Location = new System.Drawing.Point(6, 130);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(81, 20);
+            this.label34.Size = new System.Drawing.Size(136, 20);
             this.label34.TabIndex = 0;
-            this.label34.Text = "Start date :";
+            this.label34.Text = "Planned start date :";
             // 
-            // dtpEndDateOngoingCourse
+            // dtpPlannedEndDateOngoingCourse
             // 
-            this.dtpEndDateOngoingCourse.Location = new System.Drawing.Point(187, 233);
-            this.dtpEndDateOngoingCourse.Name = "dtpEndDateOngoingCourse";
-            this.dtpEndDateOngoingCourse.Size = new System.Drawing.Size(408, 27);
-            this.dtpEndDateOngoingCourse.TabIndex = 6;
+            this.dtpPlannedEndDateOngoingCourse.Location = new System.Drawing.Point(159, 163);
+            this.dtpPlannedEndDateOngoingCourse.Name = "dtpPlannedEndDateOngoingCourse";
+            this.dtpPlannedEndDateOngoingCourse.Size = new System.Drawing.Size(221, 27);
+            this.dtpPlannedEndDateOngoingCourse.TabIndex = 4;
             // 
-            // dtpStartDateOngoingCourses
+            // dtpPlannedStartDateOngoingCourses
             // 
-            this.dtpStartDateOngoingCourses.Location = new System.Drawing.Point(187, 200);
-            this.dtpStartDateOngoingCourses.Name = "dtpStartDateOngoingCourses";
-            this.dtpStartDateOngoingCourses.Size = new System.Drawing.Size(408, 27);
-            this.dtpStartDateOngoingCourses.TabIndex = 5;
-            // 
-            // btnGetTeacherDataOngoingCourse
-            // 
-            this.btnGetTeacherDataOngoingCourse.BackColor = System.Drawing.Color.Lime;
-            this.btnGetTeacherDataOngoingCourse.Location = new System.Drawing.Point(481, 96);
-            this.btnGetTeacherDataOngoingCourse.Name = "btnGetTeacherDataOngoingCourse";
-            this.btnGetTeacherDataOngoingCourse.Size = new System.Drawing.Size(114, 28);
-            this.btnGetTeacherDataOngoingCourse.TabIndex = 4;
-            this.btnGetTeacherDataOngoingCourse.Text = "Get data";
-            this.btnGetTeacherDataOngoingCourse.UseVisualStyleBackColor = false;
-            this.btnGetTeacherDataOngoingCourse.Click += new System.EventHandler(this.btnGetTeacherDataOngoingCourse_Click);
-            // 
-            // btnGetCourseDataOngoingCourse
-            // 
-            this.btnGetCourseDataOngoingCourse.BackColor = System.Drawing.Color.Lime;
-            this.btnGetCourseDataOngoingCourse.Location = new System.Drawing.Point(481, 27);
-            this.btnGetCourseDataOngoingCourse.Name = "btnGetCourseDataOngoingCourse";
-            this.btnGetCourseDataOngoingCourse.Size = new System.Drawing.Size(114, 28);
-            this.btnGetCourseDataOngoingCourse.TabIndex = 2;
-            this.btnGetCourseDataOngoingCourse.Text = "Get data";
-            this.btnGetCourseDataOngoingCourse.UseVisualStyleBackColor = false;
-            this.btnGetCourseDataOngoingCourse.Click += new System.EventHandler(this.btnGetCourseDataOngoingCourse_Click);
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(6, 66);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(102, 20);
-            this.label35.TabIndex = 0;
-            this.label35.Text = "Course name :";
-            // 
-            // tbxTeacherNameOngoingCourse
-            // 
-            this.tbxTeacherNameOngoingCourse.Enabled = false;
-            this.tbxTeacherNameOngoingCourse.Location = new System.Drawing.Point(187, 131);
-            this.tbxTeacherNameOngoingCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbxTeacherNameOngoingCourse.Name = "tbxTeacherNameOngoingCourse";
-            this.tbxTeacherNameOngoingCourse.Size = new System.Drawing.Size(408, 27);
-            this.tbxTeacherNameOngoingCourse.TabIndex = 0;
+            this.dtpPlannedStartDateOngoingCourses.Location = new System.Drawing.Point(159, 130);
+            this.dtpPlannedStartDateOngoingCourses.Name = "dtpPlannedStartDateOngoingCourses";
+            this.dtpPlannedStartDateOngoingCourses.Size = new System.Drawing.Size(221, 27);
+            this.dtpPlannedStartDateOngoingCourses.TabIndex = 3;
             // 
             // cbCourseIdOngoingCourses
             // 
             this.cbCourseIdOngoingCourses.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCourseIdOngoingCourses.FormattingEnabled = true;
-            this.cbCourseIdOngoingCourses.Location = new System.Drawing.Point(187, 27);
+            this.cbCourseIdOngoingCourses.Location = new System.Drawing.Point(159, 27);
             this.cbCourseIdOngoingCourses.Name = "cbCourseIdOngoingCourses";
-            this.cbCourseIdOngoingCourses.Size = new System.Drawing.Size(288, 28);
+            this.cbCourseIdOngoingCourses.Size = new System.Drawing.Size(221, 28);
             this.cbCourseIdOngoingCourses.TabIndex = 1;
             this.cbCourseIdOngoingCourses.Click += new System.EventHandler(this.cbCourseIdOngoingCourses_Click);
             // 
@@ -1564,10 +1247,10 @@
             // 
             this.cbTeacherIdOngoingCourses.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTeacherIdOngoingCourses.FormattingEnabled = true;
-            this.cbTeacherIdOngoingCourses.Location = new System.Drawing.Point(187, 96);
+            this.cbTeacherIdOngoingCourses.Location = new System.Drawing.Point(159, 96);
             this.cbTeacherIdOngoingCourses.Name = "cbTeacherIdOngoingCourses";
-            this.cbTeacherIdOngoingCourses.Size = new System.Drawing.Size(288, 28);
-            this.cbTeacherIdOngoingCourses.TabIndex = 3;
+            this.cbTeacherIdOngoingCourses.Size = new System.Drawing.Size(221, 28);
+            this.cbTeacherIdOngoingCourses.TabIndex = 2;
             this.cbTeacherIdOngoingCourses.Click += new System.EventHandler(this.cbTeacherIdOngoingCourses_Click);
             // 
             // label36
@@ -1575,68 +1258,32 @@
             this.label36.AutoSize = true;
             this.label36.Location = new System.Drawing.Point(6, 32);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(78, 20);
+            this.label36.Size = new System.Drawing.Size(61, 20);
             this.label36.TabIndex = 0;
-            this.label36.Text = "Course Id :";
+            this.label36.Text = "Course :";
             // 
             // btnStartOngoingCourse
             // 
             this.btnStartOngoingCourse.BackColor = System.Drawing.Color.Green;
             this.btnStartOngoingCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStartOngoingCourse.ForeColor = System.Drawing.Color.White;
-            this.btnStartOngoingCourse.Location = new System.Drawing.Point(187, 280);
+            this.btnStartOngoingCourse.Location = new System.Drawing.Point(190, 232);
             this.btnStartOngoingCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnStartOngoingCourse.Name = "btnStartOngoingCourse";
-            this.btnStartOngoingCourse.Size = new System.Drawing.Size(408, 40);
-            this.btnStartOngoingCourse.TabIndex = 7;
-            this.btnStartOngoingCourse.Text = "Start new course";
+            this.btnStartOngoingCourse.Size = new System.Drawing.Size(190, 40);
+            this.btnStartOngoingCourse.TabIndex = 5;
+            this.btnStartOngoingCourse.Text = "Plan course";
             this.btnStartOngoingCourse.UseVisualStyleBackColor = false;
-            this.btnStartOngoingCourse.Click += new System.EventHandler(this.btnStartOngoingCourse_Click);
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(6, 170);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(126, 20);
-            this.label37.TabIndex = 0;
-            this.label37.Text = "Teacher surname :";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(6, 135);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(107, 20);
-            this.label38.TabIndex = 0;
-            this.label38.Text = "Teacher name :";
+            this.btnStartOngoingCourse.Click += new System.EventHandler(this.btnPlanOngoingCourse_Click);
             // 
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(6, 101);
+            this.label39.Location = new System.Drawing.Point(6, 99);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(83, 20);
+            this.label39.Size = new System.Drawing.Size(66, 20);
             this.label39.TabIndex = 0;
-            this.label39.Text = "Teacher Id :";
-            // 
-            // tbxCourseNameOngoingCourses
-            // 
-            this.tbxCourseNameOngoingCourses.Enabled = false;
-            this.tbxCourseNameOngoingCourses.Location = new System.Drawing.Point(187, 62);
-            this.tbxCourseNameOngoingCourses.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbxCourseNameOngoingCourses.Name = "tbxCourseNameOngoingCourses";
-            this.tbxCourseNameOngoingCourses.Size = new System.Drawing.Size(408, 27);
-            this.tbxCourseNameOngoingCourses.TabIndex = 0;
-            // 
-            // tbxTeacherSurnameOngoingCourse
-            // 
-            this.tbxTeacherSurnameOngoingCourse.Enabled = false;
-            this.tbxTeacherSurnameOngoingCourse.Location = new System.Drawing.Point(187, 166);
-            this.tbxTeacherSurnameOngoingCourse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbxTeacherSurnameOngoingCourse.Name = "tbxTeacherSurnameOngoingCourse";
-            this.tbxTeacherSurnameOngoingCourse.Size = new System.Drawing.Size(408, 27);
-            this.tbxTeacherSurnameOngoingCourse.TabIndex = 0;
+            this.label39.Text = "Teacher :";
             // 
             // dgvOngoingCourses
             // 
@@ -1650,7 +1297,7 @@
             this.dgvOngoingCourses.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvOngoingCourses.Name = "dgvOngoingCourses";
             this.dgvOngoingCourses.RowTemplate.Height = 25;
-            this.dgvOngoingCourses.Size = new System.Drawing.Size(956, 248);
+            this.dgvOngoingCourses.Size = new System.Drawing.Size(956, 283);
             this.dgvOngoingCourses.TabIndex = 0;
             // 
             // tabPage8
@@ -1671,7 +1318,7 @@
             this.btnDeleteStudentOngoingCourseStudents.BackColor = System.Drawing.Color.Red;
             this.btnDeleteStudentOngoingCourseStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteStudentOngoingCourseStudents.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteStudentOngoingCourseStudents.Location = new System.Drawing.Point(742, 542);
+            this.btnDeleteStudentOngoingCourseStudents.Location = new System.Drawing.Point(742, 537);
             this.btnDeleteStudentOngoingCourseStudents.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDeleteStudentOngoingCourseStudents.Name = "btnDeleteStudentOngoingCourseStudents";
             this.btnDeleteStudentOngoingCourseStudents.Size = new System.Drawing.Size(220, 40);
@@ -1690,23 +1337,18 @@
             this.gbOngoingCourseStudents.Controls.Add(this.label40);
             this.gbOngoingCourseStudents.Controls.Add(this.label41);
             this.gbOngoingCourseStudents.Controls.Add(this.dtpLessonDate);
-            this.gbOngoingCourseStudents.Controls.Add(this.btnGetStudentDataOngoingCourseStudents);
             this.gbOngoingCourseStudents.Controls.Add(this.label42);
-            this.gbOngoingCourseStudents.Controls.Add(this.tbxStudentNameOngoingCourseStudents);
             this.gbOngoingCourseStudents.Controls.Add(this.cbOngoingCourseId);
             this.gbOngoingCourseStudents.Controls.Add(this.cbStudentIdOngoingCourseStudents);
             this.gbOngoingCourseStudents.Controls.Add(this.label43);
             this.gbOngoingCourseStudents.Controls.Add(this.btnAddStudentOngoingCourseStudents);
-            this.gbOngoingCourseStudents.Controls.Add(this.label44);
-            this.gbOngoingCourseStudents.Controls.Add(this.label45);
             this.gbOngoingCourseStudents.Controls.Add(this.label46);
             this.gbOngoingCourseStudents.Controls.Add(this.tbxLessonName);
-            this.gbOngoingCourseStudents.Controls.Add(this.tbxStudentSurnameOngoingCourseStudents);
-            this.gbOngoingCourseStudents.Location = new System.Drawing.Point(6, 206);
+            this.gbOngoingCourseStudents.Location = new System.Drawing.Point(6, 256);
             this.gbOngoingCourseStudents.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbOngoingCourseStudents.Name = "gbOngoingCourseStudents";
             this.gbOngoingCourseStudents.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gbOngoingCourseStudents.Size = new System.Drawing.Size(601, 384);
+            this.gbOngoingCourseStudents.Size = new System.Drawing.Size(601, 329);
             this.gbOngoingCourseStudents.TabIndex = 2;
             this.gbOngoingCourseStudents.TabStop = false;
             this.gbOngoingCourseStudents.Text = "Ongoing course students";
@@ -1714,7 +1356,7 @@
             // rbNotInLesson
             // 
             this.rbNotInLesson.AutoSize = true;
-            this.rbNotInLesson.Location = new System.Drawing.Point(280, 200);
+            this.rbNotInLesson.Location = new System.Drawing.Point(280, 130);
             this.rbNotInLesson.Name = "rbNotInLesson";
             this.rbNotInLesson.Size = new System.Drawing.Size(113, 24);
             this.rbNotInLesson.TabIndex = 6;
@@ -1725,7 +1367,7 @@
             // rbInLesson
             // 
             this.rbInLesson.AutoSize = true;
-            this.rbInLesson.Location = new System.Drawing.Point(187, 200);
+            this.rbInLesson.Location = new System.Drawing.Point(187, 130);
             this.rbInLesson.Name = "rbInLesson";
             this.rbInLesson.Size = new System.Drawing.Size(87, 24);
             this.rbInLesson.TabIndex = 5;
@@ -1736,7 +1378,7 @@
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(6, 202);
+            this.label47.Location = new System.Drawing.Point(6, 132);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(87, 20);
             this.label47.TabIndex = 9;
@@ -1744,7 +1386,7 @@
             // 
             // tbxNote
             // 
-            this.tbxNote.Location = new System.Drawing.Point(187, 264);
+            this.tbxNote.Location = new System.Drawing.Point(187, 194);
             this.tbxNote.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbxNote.Multiline = true;
             this.tbxNote.Name = "tbxNote";
@@ -1754,7 +1396,7 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(6, 267);
+            this.label40.Location = new System.Drawing.Point(6, 197);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(49, 20);
             this.label40.TabIndex = 0;
@@ -1763,7 +1405,7 @@
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(6, 235);
+            this.label41.Location = new System.Drawing.Point(6, 165);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(94, 20);
             this.label41.TabIndex = 0;
@@ -1771,21 +1413,10 @@
             // 
             // dtpLessonDate
             // 
-            this.dtpLessonDate.Location = new System.Drawing.Point(187, 230);
+            this.dtpLessonDate.Location = new System.Drawing.Point(187, 160);
             this.dtpLessonDate.Name = "dtpLessonDate";
             this.dtpLessonDate.Size = new System.Drawing.Size(408, 27);
             this.dtpLessonDate.TabIndex = 7;
-            // 
-            // btnGetStudentDataOngoingCourseStudents
-            // 
-            this.btnGetStudentDataOngoingCourseStudents.BackColor = System.Drawing.Color.Lime;
-            this.btnGetStudentDataOngoingCourseStudents.Location = new System.Drawing.Point(481, 96);
-            this.btnGetStudentDataOngoingCourseStudents.Name = "btnGetStudentDataOngoingCourseStudents";
-            this.btnGetStudentDataOngoingCourseStudents.Size = new System.Drawing.Size(114, 28);
-            this.btnGetStudentDataOngoingCourseStudents.TabIndex = 4;
-            this.btnGetStudentDataOngoingCourseStudents.Text = "Get data";
-            this.btnGetStudentDataOngoingCourseStudents.UseVisualStyleBackColor = false;
-            this.btnGetStudentDataOngoingCourseStudents.Click += new System.EventHandler(this.btnGetStudentDataOngoingCourseStudents_Click);
             // 
             // label42
             // 
@@ -1795,15 +1426,6 @@
             this.label42.Size = new System.Drawing.Size(101, 20);
             this.label42.TabIndex = 0;
             this.label42.Text = "Lesson name :";
-            // 
-            // tbxStudentNameOngoingCourseStudents
-            // 
-            this.tbxStudentNameOngoingCourseStudents.Enabled = false;
-            this.tbxStudentNameOngoingCourseStudents.Location = new System.Drawing.Point(187, 131);
-            this.tbxStudentNameOngoingCourseStudents.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbxStudentNameOngoingCourseStudents.Name = "tbxStudentNameOngoingCourseStudents";
-            this.tbxStudentNameOngoingCourseStudents.Size = new System.Drawing.Size(408, 27);
-            this.tbxStudentNameOngoingCourseStudents.TabIndex = 0;
             // 
             // cbOngoingCourseId
             // 
@@ -1821,7 +1443,7 @@
             this.cbStudentIdOngoingCourseStudents.FormattingEnabled = true;
             this.cbStudentIdOngoingCourseStudents.Location = new System.Drawing.Point(187, 96);
             this.cbStudentIdOngoingCourseStudents.Name = "cbStudentIdOngoingCourseStudents";
-            this.cbStudentIdOngoingCourseStudents.Size = new System.Drawing.Size(288, 28);
+            this.cbStudentIdOngoingCourseStudents.Size = new System.Drawing.Size(408, 28);
             this.cbStudentIdOngoingCourseStudents.TabIndex = 3;
             this.cbStudentIdOngoingCourseStudents.Click += new System.EventHandler(this.cbStudentIdOngoingCourseStudents_Click);
             // 
@@ -1830,16 +1452,16 @@
             this.label43.AutoSize = true;
             this.label43.Location = new System.Drawing.Point(6, 30);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(138, 20);
+            this.label43.Size = new System.Drawing.Size(121, 20);
             this.label43.TabIndex = 0;
-            this.label43.Text = "Ongoing course Id :";
+            this.label43.Text = "Ongoing course :";
             // 
             // btnAddStudentOngoingCourseStudents
             // 
             this.btnAddStudentOngoingCourseStudents.BackColor = System.Drawing.Color.Green;
             this.btnAddStudentOngoingCourseStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddStudentOngoingCourseStudents.ForeColor = System.Drawing.Color.White;
-            this.btnAddStudentOngoingCourseStudents.Location = new System.Drawing.Point(187, 336);
+            this.btnAddStudentOngoingCourseStudents.Location = new System.Drawing.Point(187, 281);
             this.btnAddStudentOngoingCourseStudents.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddStudentOngoingCourseStudents.Name = "btnAddStudentOngoingCourseStudents";
             this.btnAddStudentOngoingCourseStudents.Size = new System.Drawing.Size(408, 40);
@@ -1848,32 +1470,14 @@
             this.btnAddStudentOngoingCourseStudents.UseVisualStyleBackColor = false;
             this.btnAddStudentOngoingCourseStudents.Click += new System.EventHandler(this.btnAddStudentOngoingCourseStudents_Click);
             // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(6, 169);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(127, 20);
-            this.label44.TabIndex = 0;
-            this.label44.Text = "Student surname :";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(6, 134);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(108, 20);
-            this.label45.TabIndex = 0;
-            this.label45.Text = "Student name :";
-            // 
             // label46
             // 
             this.label46.AutoSize = true;
             this.label46.Location = new System.Drawing.Point(6, 100);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(84, 20);
+            this.label46.Size = new System.Drawing.Size(67, 20);
             this.label46.TabIndex = 0;
-            this.label46.Text = "Student Id :";
+            this.label46.Text = "Student :";
             // 
             // tbxLessonName
             // 
@@ -1882,15 +1486,6 @@
             this.tbxLessonName.Name = "tbxLessonName";
             this.tbxLessonName.Size = new System.Drawing.Size(408, 27);
             this.tbxLessonName.TabIndex = 2;
-            // 
-            // tbxStudentSurnameOngoingCourseStudents
-            // 
-            this.tbxStudentSurnameOngoingCourseStudents.Enabled = false;
-            this.tbxStudentSurnameOngoingCourseStudents.Location = new System.Drawing.Point(187, 166);
-            this.tbxStudentSurnameOngoingCourseStudents.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbxStudentSurnameOngoingCourseStudents.Name = "tbxStudentSurnameOngoingCourseStudents";
-            this.tbxStudentSurnameOngoingCourseStudents.Size = new System.Drawing.Size(408, 27);
-            this.tbxStudentSurnameOngoingCourseStudents.TabIndex = 0;
             // 
             // dgvOngoingCourseStudents
             // 
@@ -1904,7 +1499,7 @@
             this.dgvOngoingCourseStudents.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvOngoingCourseStudents.Name = "dgvOngoingCourseStudents";
             this.dgvOngoingCourseStudents.RowTemplate.Height = 25;
-            this.dgvOngoingCourseStudents.Size = new System.Drawing.Size(956, 191);
+            this.dgvOngoingCourseStudents.Size = new System.Drawing.Size(956, 241);
             this.dgvOngoingCourseStudents.TabIndex = 1;
             // 
             // frmMain
@@ -1954,11 +1549,9 @@
             this.gbTeacherCourse.ResumeLayout(false);
             this.gbTeacherCourse.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeacherCourse)).EndInit();
-            this.tabPage6.ResumeLayout(false);
-            this.gbPlannedCourses.ResumeLayout(false);
-            this.gbPlannedCourses.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPlannedCourses)).EndInit();
             this.tabPage7.ResumeLayout(false);
+            this.groupBoxStartCourse.ResumeLayout(false);
+            this.groupBoxStartCourse.PerformLayout();
             this.gbOngoingCourses.ResumeLayout(false);
             this.gbOngoingCourses.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOngoingCourses)).EndInit();
@@ -2043,57 +1636,20 @@
         private System.Windows.Forms.ComboBox cbCourseIdTeacherCourse;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button btnCreateTeacherCourse;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox tbxTeacherNameTeacherCourse;
-        private System.Windows.Forms.TextBox tbxTeacherSurnameTeacherCourse;
-        private System.Windows.Forms.TextBox tbxCourseNameTeacherCourse;
         private System.Windows.Forms.ComboBox cbTeacherIdTeacherCourse;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Button btnGetCourseData;
-        private System.Windows.Forms.Button btnGetTeacherData;
-        private System.Windows.Forms.TabPage tabPage6;
-        private System.Windows.Forms.Button btnDeletePlannedCourse;
-        private System.Windows.Forms.GroupBox gbPlannedCourses;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.DateTimePicker dtpPlannedEndDate;
-        private System.Windows.Forms.DateTimePicker dtpPlannedStartDate;
-        private System.Windows.Forms.Button btnGetTeacherDataPlannedCourse;
-        private System.Windows.Forms.Button btnGetCourseDataPlannedCourse;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox tbxTeacherNamePlannedCourses;
-        private System.Windows.Forms.ComboBox cbCourseIdPlannedCourses;
-        private System.Windows.Forms.ComboBox cbTeacherIdPlannedCourses;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Button btnPlanNewCourse;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox tbxCourseNamePlannedCourse;
-        private System.Windows.Forms.TextBox tbxTeacherSurnamePlannedCourses;
-        private System.Windows.Forms.DataGridView dgvPlannedCourses;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.Button btnDeleteOngoingCourse;
         private System.Windows.Forms.GroupBox gbOngoingCourses;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.DateTimePicker dtpEndDateOngoingCourse;
-        private System.Windows.Forms.DateTimePicker dtpStartDateOngoingCourses;
-        private System.Windows.Forms.Button btnGetTeacherDataOngoingCourse;
-        private System.Windows.Forms.Button btnGetCourseDataOngoingCourse;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.TextBox tbxTeacherNameOngoingCourse;
+        private System.Windows.Forms.DateTimePicker dtpPlannedEndDateOngoingCourse;
+        private System.Windows.Forms.DateTimePicker dtpPlannedStartDateOngoingCourses;
         private System.Windows.Forms.ComboBox cbCourseIdOngoingCourses;
         private System.Windows.Forms.ComboBox cbTeacherIdOngoingCourses;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Button btnStartOngoingCourse;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.TextBox tbxCourseNameOngoingCourses;
-        private System.Windows.Forms.TextBox tbxTeacherSurnameOngoingCourse;
         private System.Windows.Forms.DataGridView dgvOngoingCourses;
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.Button btnDeleteStudentOngoingCourseStudents;
@@ -2101,18 +1657,13 @@
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.DateTimePicker dtpLessonDate;
-        private System.Windows.Forms.Button btnGetStudentDataOngoingCourseStudents;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.TextBox tbxStudentNameOngoingCourseStudents;
         private System.Windows.Forms.ComboBox cbOngoingCourseId;
         private System.Windows.Forms.ComboBox cbStudentIdOngoingCourseStudents;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Button btnAddStudentOngoingCourseStudents;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.TextBox tbxLessonName;
-        private System.Windows.Forms.TextBox tbxStudentSurnameOngoingCourseStudents;
         private System.Windows.Forms.DataGridView dgvOngoingCourseStudents;
         private System.Windows.Forms.TextBox tbxNote;
         private System.Windows.Forms.RadioButton rbNotInLesson;
@@ -2124,5 +1675,13 @@
         private System.Windows.Forms.TextBox tbxSearchStudent;
         private System.Windows.Forms.Label label50;
         private System.Windows.Forms.TextBox tbxSearchTeacher;
+        private System.Windows.Forms.GroupBox groupBoxStartCourse;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.DateTimePicker dtpStartCourseEndDate;
+        private System.Windows.Forms.DateTimePicker dtpStartCourseStartDate;
+        private System.Windows.Forms.Button btnStartCourse;
+        private System.Windows.Forms.TextBox tbxCourseNameOngoingCourse;
+        private System.Windows.Forms.Label label25;
     }
 }
