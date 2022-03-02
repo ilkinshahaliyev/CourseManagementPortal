@@ -557,7 +557,9 @@ namespace CourseManagementPortal
         {
             cbTeacherIdOngoingCourses.Items.Clear();
 
-            GetTeachersNameAndSurname(cbTeacherIdOngoingCourses);
+            //GetTeachersNameAndSurname(cbTeacherIdOngoingCourses);
+
+            GetTeacherByProfessionName(cbCourseIdOngoingCourses.Text, cbTeacherIdOngoingCourses);
         }
 
         private void btnPlanOngoingCourse_Click(object sender, EventArgs e)
@@ -852,5 +854,26 @@ namespace CourseManagementPortal
 
             MessageBox.Show("Course started successfully.", "Course management portal", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void GetTeacherByProfessionName(string name, ComboBox comboBox)
+        {
+            ConnectionOpenControl();
+
+            SqlCommand sqlCommand = new SqlCommand($"select t.Name, t.Surname from tblCourse c " +
+                $"join tblTeacher t on c.Name = t.Profession where c.Name = '{name}'", _sqlConnection);
+
+            SqlDataReader reader = sqlCommand.ExecuteReader();
+
+            while (reader.Read())
+            {
+                comboBox.Items.Add(reader.GetString(0) + " " + reader.GetString(1));
+            }
+
+            reader.Close();
+
+            ConnectionCloseControl();
+        }
+
+
     }
 }
